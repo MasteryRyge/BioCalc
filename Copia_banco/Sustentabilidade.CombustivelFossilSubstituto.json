@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "690961f50217091b94a45e93"
+  },
+  "Combustivel fossil substituto": "Querosene de aviação",
+  "Intensidade total de carbono do combustivel fossil substituto (gramas)": 87.5,
+  "Intensidade total de carbono do combustivel fossil substituto (Kg)": 0.0875
+},
+{
+  "_id": {
+    "$oid": "690961f50217091b94a45e94"
+  },
+  "Combustivel fossil substituto": "GLP",
+  "Intensidade total de carbono do combustivel fossil substituto (gramas)": 85,
+  "Intensidade total de carbono do combustivel fossil substituto (Kg)": 0.085
+},
+{
+  "_id": {
+    "$oid": "690961f50217091b94a45e92"
+  },
+  "Combustivel fossil substituto": "Média ponderada: Diesel A, Gasolina A e GNV",
+  "Intensidade total de carbono do combustivel fossil substituto (gramas)": 86.7,
+  "Intensidade total de carbono do combustivel fossil substituto (Kg)": 0.0867
+},
+{
+  "_id": {
+    "$oid": "690961f50217091b94a45e95"
+  },
+  "Combustivel fossil substituto": "Coque de Petróleo",
+  "Intensidade total de carbono do combustivel fossil substituto (gramas)": 120.038,
+  "Intensidade total de carbono do combustivel fossil substituto (Kg)": 0.12,
+  "Intensidade de carbono da producao do combustivel fossil substituto": 0.633
+},
+{
+  "_id": {
+    "$oid": "690961f50217091b94a45e90"
+  },
+  "Combustivel fossil substituto": "Gasolina A",
+  "Intensidade total de carbono do combustivel fossil substituto (gramas)": 87.4,
+  "Intensidade total de carbono do combustivel fossil substituto (Kg)": 0.0874
+},
+{
+  "_id": {
+    "$oid": "690961f50217091b94a45e96"
+  },
+  "Combustivel fossil substituto": "Oléo Combustível",
+  "Intensidade total de carbono do combustivel fossil substituto (gramas)": 93.884,
+  "Intensidade total de carbono do combustivel fossil substituto (Kg)": 0.094,
+  "Intensidade de carbono da producao do combustivel fossil substituto": 0.678
+},
+{
+  "_id": {
+    "$oid": "690961f50217091b94a45e91"
+  },
+  "Combustivel fossil substituto": "Diesel A",
+  "Intensidade total de carbono do combustivel fossil substituto (gramas)": 86.5,
+  "Intensidade total de carbono do combustivel fossil substituto (Kg)": 0.0865
+}]

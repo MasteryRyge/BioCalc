@@ -1,0 +1,511 @@
+[{
+  "_id": {
+    "$oid": "690954e30217091b94a45e3a"
+  },
+  "Insumo": "Eucaliptus Virgem (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 0.1037211617,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.1037211617,
+  "Tipo de biomassa": "Eucalipto"
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e3c"
+  },
+  "Insumo": "Amido de milho (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.200670985,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.200670985
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e3d"
+  },
+  "Insumo": "Resíduo de Pinus (combustão)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.9719578,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.9719578
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e40"
+  },
+  "Insumo": "Casca de Amendoin (combustão)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.7439606,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.7439606
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e48"
+  },
+  "Insumo": "Eletricidade - solar",
+  "Unidade ": "kWh",
+  "Emissao processo": 0.08008669637,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.08008669637
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e50"
+  },
+  "Insumo": "Lenha (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 0.026,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.026
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e57"
+  },
+  "Insumo": "Combustão de Cavaco de madeira (combustão)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.9719578,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.9719578
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e5f"
+  },
+  "Insumo": "Transporte, caminhão  >32t",
+  "Unidade ": "tkm",
+  "Emissao processo": 0.06112448988,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.06112448988
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e60"
+  },
+  "Insumo": "Transporte, caminhão  60m³",
+  "Unidade ": "tkm",
+  "Emissao processo": 0.06112448988,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.06112448988
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e3e"
+  },
+  "Insumo": "Resíduo de Eucaliptus (combustão)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.9719578,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.9719578
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e41"
+  },
+  "Insumo": "Eucaliptus Virgem (combustão)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.9719578,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.9719578
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e43"
+  },
+  "Insumo": "Eletricidade da rede - mix média voltagem",
+  "Unidade ": "kWh",
+  "Emissao processo": 0.5023132396,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.5023132396
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e47"
+  },
+  "Insumo": "Eletricidade - eólica",
+  "Unidade ": "kWh",
+  "Emissao processo": 0.0001380432136,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.0001380432136
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e4a"
+  },
+  "Insumo": "Gás Natural (produção)",
+  "Unidade ": "Nm³",
+  "Emissao processo": 0.3345,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.3345
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e4d"
+  },
+  "Insumo": "Etanol anidro (produção)",
+  "Unidade ": "litro",
+  "Emissao processo": 1.225663717,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.225663717,
+  "Massa especifica (kg/litro)": 0.79
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e51"
+  },
+  "Insumo": "Combustão de Diesel (combustão)",
+  "Unidade ": "litro",
+  "Emissao processo": 2.641293336,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 2.641293336
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e52"
+  },
+  "Insumo": "Uso de Gás Natural (combustão)",
+  "Unidade ": "Nm³",
+  "Emissao processo": 1.530932397,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.530932397
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e53"
+  },
+  "Insumo": "Uso de GLP (combustão)",
+  "Unidade ": "kg",
+  "Emissao processo": 2.934910437,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 2.934910437
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e59"
+  },
+  "Insumo": "Água",
+  "Unidade ": "litro",
+  "Emissao processo": 0.0000237497088,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.0000237497088
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e5a"
+  },
+  "Insumo": "Óleo lubrificante",
+  "Unidade ": "kg",
+  "Emissao processo": 1.5124,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.5124
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e37"
+  },
+  "Insumo": "Resíduo de Eucaliptus (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 0.02509471581,
+  "Alocacao produto": 0,
+  "Alocacao co-produto": 1,
+  "Emissao biomassa alocada": 0.02509471581,
+  "Tipo de biomassa": "Eucalipto"
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e38"
+  },
+  "Insumo": "Carvão vegetal de eucalipto (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.762536306,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.762536306,
+  "Tipo de biomassa": "Eucalipto"
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e3f"
+  },
+  "Insumo": "Carvão vegetal de eucalipto (combustão)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.8810216,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.8810216
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e49"
+  },
+  "Insumo": "Diesel (produção)",
+  "Unidade ": "litro",
+  "Emissao processo": 0.7958333333,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.7958333333,
+  "Massa especifica (kg/litro)": 0.84
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e4c"
+  },
+  "Insumo": "Gasolina A (produção)",
+  "Unidade ": "litro",
+  "Emissao processo": 1.306654903,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.306654903,
+  "Massa especifica (kg/litro)": 0.74
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e4f"
+  },
+  "Insumo": "Cavaco de madeira (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 0.3647,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.3647
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e54"
+  },
+  "Insumo": "Combustão de Gasolina A (combustão)",
+  "Unidade ": "litro",
+  "Emissao processo": 2.247032975,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 2.247032975
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e56"
+  },
+  "Insumo": "Combustão de Etanol hidratado (combustão)",
+  "Unidade ": "litro",
+  "Emissao processo": 1.70418068,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.70418068
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e58"
+  },
+  "Insumo": "Combustão de Lenha (combustão)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.9719578,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.9719578
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e5c"
+  },
+  "Insumo": "Transporte"
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e63"
+  },
+  "Insumo": "Transporte, ferroviário",
+  "Unidade ": "tkm",
+  "Emissao processo": 0.03335804744,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.03335804744
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e36"
+  },
+  "Insumo": "Resíduo de Pinus (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 0.02509471581,
+  "Alocacao produto": 0,
+  "Alocacao co-produto": 1,
+  "Emissao biomassa alocada": 0.02509471581,
+  "Tipo de biomassa": "Pinus"
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e39"
+  },
+  "Insumo": "Casca de Amendoin (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 0.6660516674,
+  "Alocacao produto": 0.77,
+  "Alocacao co-produto": 0.23,
+  "Emissao biomassa alocada": 0.1531918835,
+  "Tipo de biomassa": "Amendoin"
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e3b"
+  },
+  "Insumo": "Pinus Virgem (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 0.4217291404,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.4217291404,
+  "Tipo de biomassa": "Pinus"
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e42"
+  },
+  "Insumo": "Pinus Virgem (combustão)",
+  "Unidade ": "kg",
+  "Emissao processo": 1.9719578,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.9719578
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e44"
+  },
+  "Insumo": "Eletricidade da rede - mix alta voltagem",
+  "Unidade ": "kWh",
+  "Emissao processo": 0.128769234,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.128769234
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e45"
+  },
+  "Insumo": "Eletricidade - PCH",
+  "Unidade ": "kWh",
+  "Emissao processo": 0.03674499865,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.03674499865
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e46"
+  },
+  "Insumo": "Eletricidade - biomassa",
+  "Unidade ": "kWh",
+  "Emissao processo": 0.1099588184,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.1099588184
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e4b"
+  },
+  "Insumo": "GLP (produção)",
+  "Unidade ": "kg",
+  "Emissao processo": 0.7219673561,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.7219673561
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e4e"
+  },
+  "Insumo": "Etanol hidratado (produção)",
+  "Unidade ": "litro",
+  "Emissao processo": 0.6065512979,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.6065512979,
+  "Massa especifica (kg/litro)": 0.81
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e55"
+  },
+  "Insumo": "Combustão de Etanol anidro (combustão)",
+  "Unidade ": "litro",
+  "Emissao processo": 1.785011283,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 1.785011283
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e5b"
+  },
+  "Insumo": "Areia de sílica",
+  "Unidade ": "kg",
+  "Emissao processo": 0.03577571375,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.03577571375
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e5d"
+  },
+  "Insumo": "Transporte, caminhão 7.5-16t",
+  "Unidade ": "tkm",
+  "Emissao processo": 0.09369746797,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.09369746797
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e5e"
+  },
+  "Insumo": "Transporte caminhão 16-32t",
+  "Unidade ": "tkm",
+  "Emissao processo": 0.09802051938,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.09802051938
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e61"
+  },
+  "Insumo": "Transporte, navio",
+  "Unidade ": "tkm",
+  "Emissao processo": 0.009518329267,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.009518329267
+},
+{
+  "_id": {
+    "$oid": "690954e30217091b94a45e62"
+  },
+  "Insumo": "Transporte, balsa",
+  "Unidade ": "tkm",
+  "Emissao processo": 0.03497022968,
+  "Alocacao produto": 1,
+  "Alocacao co-produto": 0,
+  "Emissao biomassa alocada": 0.03497022968
+}]

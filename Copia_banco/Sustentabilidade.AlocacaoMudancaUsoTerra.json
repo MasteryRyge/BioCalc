@@ -1,0 +1,170 @@
+[{
+  "_id": {
+    "$oid": "69095f090217091b94a45e69"
+  },
+  "Biomassa": "Resíduo de Eucaliptus",
+  "Estagios do ciclo de vida": "Resíduos de galhos e folhas",
+  "Biomassa e Ciclo de Vida": "Resíduo de EucaliptusResíduos de galhos e folhas",
+  "Tipo de Biomassa": "Eucalipto",
+  "Produto": "Tora de madeira",
+  "Alocacao produto": 0.675,
+  "Co-produto": "Resíduos de galhos e folhas",
+  "Alocacao co-produto": 0.325,
+  "Alocacao considerada para biomassa": 0.325
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e6d"
+  },
+  "Biomassa": "Carvão vegetal de eucalipto",
+  "Estagios do ciclo de vida": "Não aplica",
+  "Biomassa e Ciclo de Vida": "Carvão vegetal de eucaliptoNão aplica",
+  "Tipo de Biomassa": "Eucalipto",
+  "Produto": "Carvão vegetal",
+  "Alocacao produto": 1,
+  "Co-produto": "-",
+  "Alocacao co-produto": 0,
+  "Alocacao considerada para biomassa": 1
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e6e"
+  },
+  "Biomassa": "Casca de Amendoin",
+  "Estagios do ciclo de vida": "Não aplica",
+  "Biomassa e Ciclo de Vida": "Casca de AmendoinNão aplica",
+  "Tipo de Biomassa": "Amendoin",
+  "Produto": "Amendoim",
+  "Alocacao produto": 0.77,
+  "Co-produto": "Casca de amendoim",
+  "Alocacao co-produto": 0.23,
+  "Alocacao considerada para biomassa": 0.23
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e68"
+  },
+  "Biomassa": "Resíduo de Pinus",
+  "Estagios do ciclo de vida": "Não especificado",
+  "Biomassa e Ciclo de Vida": "Resíduo de PinusNão especificado",
+  "Tipo de Biomassa": "Pinus",
+  "Produto": "-",
+  "Co-produto": "Não especificado",
+  "Alocacao co-produto": 0.2320833333,
+  "Alocacao considerada para biomassa": 0.2320833333,
+  "Filtro": "Não especificado"
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e6a"
+  },
+  "Biomassa": "Resíduo de Eucaliptus",
+  "Estagios do ciclo de vida": "Resíduos de Casca ",
+  "Biomassa e Ciclo de Vida": "Resíduo de EucaliptusResíduos de Casca ",
+  "Tipo de Biomassa": "Eucalipto",
+  "Produto": "Troncos descascados",
+  "Alocacao produto": 0.6075,
+  "Co-produto": "Casca de eucalipto",
+  "Alocacao co-produto": 0.0675,
+  "Alocacao considerada para biomassa": 0.0675
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e6b"
+  },
+  "Biomassa": "Resíduo de Eucaliptus",
+  "Estagios do ciclo de vida": "Resíduo de serragem",
+  "Biomassa e Ciclo de Vida": "Resíduo de EucaliptusResíduo de serragem",
+  "Tipo de Biomassa": "Eucalipto",
+  "Produto": "Madeira serrada",
+  "Alocacao produto": 0.30375,
+  "Co-produto": "Subproduto da serraria",
+  "Alocacao co-produto": 0.30375,
+  "Alocacao considerada para biomassa": 0.30375
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e6c"
+  },
+  "Biomassa": "Resíduo de Eucaliptus",
+  "Estagios do ciclo de vida": "Não especificado",
+  "Biomassa e Ciclo de Vida": "Resíduo de EucaliptusNão especificado",
+  "Tipo de Biomassa": "Eucalipto",
+  "Produto": "-",
+  "Co-produto": "Não especificado",
+  "Alocacao co-produto": 0.2320833333,
+  "Alocacao considerada para biomassa": 0.2320833333
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e6f"
+  },
+  "Biomassa": "Eucaliptus Virgem",
+  "Estagios do ciclo de vida": "Não aplica",
+  "Biomassa e Ciclo de Vida": "Eucaliptus VirgemNão aplica",
+  "Tipo de Biomassa": "Eucalipto",
+  "Produto": "Eucaliptus virgem",
+  "Alocacao produto": 0.675,
+  "Co-produto": "Resíduo de eucaliptus",
+  "Alocacao co-produto": 0.325,
+  "Alocacao considerada para biomassa": 0.675
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e66"
+  },
+  "Biomassa": "Resíduo de Pinus",
+  "Estagios do ciclo de vida": "Resíduos de Casca ",
+  "Biomassa e Ciclo de Vida": "Resíduo de PinusResíduos de Casca ",
+  "Tipo de Biomassa": "Pinus",
+  "Produto": "Troncos descascados",
+  "Alocacao produto": 0.6075,
+  "Co-produto": "Casca de pinus",
+  "Alocacao co-produto": 0.0675,
+  "Alocacao considerada para biomassa": 0.0675,
+  "Filtro": "Resíduos de Casca "
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e67"
+  },
+  "Biomassa": "Resíduo de Pinus",
+  "Estagios do ciclo de vida": "Resíduo de serragem",
+  "Biomassa e Ciclo de Vida": "Resíduo de PinusResíduo de serragem",
+  "Tipo de Biomassa": "Pinus",
+  "Produto": "Madeira serrada",
+  "Alocacao produto": 0.30375,
+  "Co-produto": "Subproduto da serraria",
+  "Alocacao co-produto": 0.30375,
+  "Alocacao considerada para biomassa": 0.30375,
+  "Filtro": "Resíduo de serragem"
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e65"
+  },
+  "Biomassa": "Resíduo de Pinus",
+  "Estagios do ciclo de vida": "Resíduos de galhos e folhas",
+  "Biomassa e Ciclo de Vida": "Resíduo de PinusResíduos de galhos e folhas",
+  "Tipo de Biomassa": "Pinus",
+  "Produto": "Tora de madeira",
+  "Alocacao produto": 0.675,
+  "Co-produto": "Resíduos de galhos e folhas",
+  "Alocacao co-produto": 0.325,
+  "Alocacao considerada para biomassa": 0.325,
+  "Filtro": "Resíduos de galhos e folhas"
+},
+{
+  "_id": {
+    "$oid": "69095f090217091b94a45e70"
+  },
+  "Biomassa": "Pinus Virgem",
+  "Estagios do ciclo de vida": "Não aplica",
+  "Biomassa e Ciclo de Vida": "Pinus VirgemNão aplica",
+  "Tipo de Biomassa": "Pinus",
+  "Produto": "Pinus virgm",
+  "Alocacao produto": 0.675,
+  "Co-produto": "Resíduo de pinus",
+  "Alocacao co-produto": 0.325,
+  "Alocacao considerada para biomassa": 0.675
+}]

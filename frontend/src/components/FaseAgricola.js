@@ -288,6 +288,8 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola}) {
                 </div>
                 <div className="col-md-11">
                     <div className="mb-5" id="producaoBiomassa">
+                        <h2 className="mb-3">Produção de biomassa</h2>
+
                         <label>Tipo de Biomassa (Ex. Pinus, Casca de amendoim, etc.)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">

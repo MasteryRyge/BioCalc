@@ -1,0 +1,232 @@
+[{
+  "_id": {
+    "$oid": "690965940217091b94a45eaa"
+  },
+  "Combustiveis": "Combustão de Gasolina A",
+  "Unidade de entrada": "litro",
+  "Fatores de Emissao do setor de energia CO2 TJ": 69300,
+  "Fatores de Emissao do setor de energia CH4 TJ": 3,
+  "Fatores de Emissao do setor de energia N2O TJ": 0.6,
+  "PCI MJ": 43.54,
+  "PCI TJ": 0.00004354,
+  "Fator de conversao de medida": 0.742,
+  "Fatores de Emissao do setor de energia CO2 Un": 2.238852924,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.00009692004,
+  "Fatores de Emissao do setor de energia N2O Un": 0.000019384008,
+  "Fator de emissão CO2 eq unidade": 2.25
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45eac"
+  },
+  "Combustiveis": "Combustão de Etanol hidratado",
+  "Unidade de entrada": "litro",
+  "Fatores de Emissao do setor de energia CO2 TJ": 79600,
+  "Fatores de Emissao do setor de energia CH4 TJ": 3,
+  "Fatores de Emissao do setor de energia N2O TJ": 0.6,
+  "PCI MJ": 26.38,
+  "PCI TJ": 0.00002638,
+  "Fator de conversao de medida": 0.809,
+  "Fatores de Emissao do setor de energia CO2 Un": 1.698777032,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.00006402426,
+  "Fatores de Emissao do setor de energia N2O Un": 0.000012804852,
+  "Fator de emissão CO2 eq unidade": 1.7
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45ead"
+  },
+  "Combustiveis": "Combustão de Cavaco de madeira",
+  "Unidade de entrada": "kg",
+  "Fatores de Emissao do setor de energia CO2 TJ": 112000,
+  "Fatores de Emissao do setor de energia CH4 TJ": 30,
+  "Fatores de Emissao do setor de energia N2O TJ": 4,
+  "PCI MJ": 17.3,
+  "PCI TJ": 0.0000173,
+  "Fator de conversao de medida": 1,
+  "Fatores de Emissao do setor de energia CO2 Un": 1.9376,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.000519,
+  "Fatores de Emissao do setor de energia N2O Un": 0.0000692,
+  "Fator de emissão CO2 eq unidade": 1.97,
+  "Fator de emissão CO2 eq MJ": 0.114
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45ea5"
+  },
+  "Combustiveis": "Combustão de Oleo Combustível",
+  "Unidade de entrada": "MJ",
+  "Fatores de Emissao do setor de energia CO2 TJ": 73300,
+  "Fatores de Emissao do setor de energia CH4 TJ": 3,
+  "Fatores de Emissao do setor de energia N2O TJ": 0.6,
+  "PCI MJ": 40.15,
+  "PCI TJ": 0.00004015,
+  "Fator de conversao de medida": 1,
+  "Fatores de Emissao do setor de energia CO2 Un": 2.942995,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.00012045,
+  "Fatores de Emissao do setor de energia N2O Un": 0.00002409,
+  "Fator de emissão CO2 eq unidade": 2.95,
+  "Fator de emissão CO2 eq MJ": 0.077
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45ea6"
+  },
+  "Combustiveis": "Combustão de Coque de Petróleo",
+  "Unidade de entrada": "MJ",
+  "Fatores de Emissao do setor de energia CO2 TJ": 97500,
+  "Fatores de Emissao do setor de energia CH4 TJ": 3,
+  "Fatores de Emissao do setor de energia N2O TJ": 0.6,
+  "PCI MJ": 35.12,
+  "PCI TJ": 0.00003512,
+  "Fator de conversao de medida": 1,
+  "Fatores de Emissao do setor de energia CO2 Un": 3.4242,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.00010536,
+  "Fatores de Emissao do setor de energia N2O Un": 0.000021072,
+  "Fator de emissão CO2 eq unidade": 3.43,
+  "Fator de emissão CO2 eq MJ": 0.102
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45ea7"
+  },
+  "Combustiveis": "Combustão de Diesel",
+  "Unidade de entrada": "litro",
+  "Fatores de Emissao do setor de energia CO2 TJ": 74100,
+  "Fatores de Emissao do setor de energia CH4 TJ": 3,
+  "Fatores de Emissao do setor de energia N2O TJ": 0.6,
+  "PCI MJ": 42.29,
+  "PCI TJ": 0.00004229,
+  "Fator de conversao de medida": 0.84,
+  "Fatores de Emissao do setor de energia CO2 Un": 2.63229876,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.0001065708,
+  "Fatores de Emissao do setor de energia N2O Un": 0.00002131416,
+  "Fator de emissão CO2 eq unidade": 2.64
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45ea8"
+  },
+  "Combustiveis": "Uso de Gás Natural",
+  "Unidade de entrada": "Nm³",
+  "Fatores de Emissao do setor de energia CO2 TJ": 56100,
+  "Fatores de Emissao do setor de energia CH4 TJ": 1,
+  "Fatores de Emissao do setor de energia N2O TJ": 0.1,
+  "PCI MJ": 36.84,
+  "PCI TJ": 0.00003684,
+  "Fator de conversao de medida": 0.74,
+  "Fatores de Emissao do setor de energia CO2 Un": 1.52937576,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.0000272616,
+  "Fatores de Emissao do setor de energia N2O Un": 0.00000272616,
+  "Fator de emissão CO2 eq unidade": 1.53
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45ea9"
+  },
+  "Combustiveis": "Uso de GLP",
+  "Unidade de entrada": "kg",
+  "Fatores de Emissao do setor de energia CO2 TJ": 63100,
+  "Fatores de Emissao do setor de energia CH4 TJ": 1,
+  "Fatores de Emissao do setor de energia N2O TJ": 0.1,
+  "PCI MJ": 46.47,
+  "PCI TJ": 0.00004647,
+  "Fator de conversao de medida": 1,
+  "Fatores de Emissao do setor de energia CO2 Un": 2.932257,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.00004647,
+  "Fatores de Emissao do setor de energia N2O Un": 0.000004647,
+  "Fator de emissão CO2 eq unidade": 2.93
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45eb0"
+  },
+  "Combustiveis": "Combustão de resíduo de amendoim",
+  "Unidade de entrada": "kg",
+  "Fatores de Emissao do setor de energia CO2 TJ": 100000,
+  "Fatores de Emissao do setor de energia CH4 TJ": 30,
+  "Fatores de Emissao do setor de energia N2O TJ": 4,
+  "PCI MJ": 17.1,
+  "PCI TJ": 0.0000171,
+  "Fator de conversao de medida": 1,
+  "Fatores de Emissao do setor de energia CO2 Un": 1.71,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.000513,
+  "Fatores de Emissao do setor de energia N2O Un": 0.0000684,
+  "Fator de emissão CO2 eq unidade": 1.74,
+  "Fator de emissão CO2 eq MJ": 0.102
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45eb1"
+  },
+  "Combustiveis": "Combustão do Pellet de resíduo de Pinus",
+  "Unidade de entrada": "Kg",
+  "PCI MJ": 17.6
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45eb3"
+  },
+  "Combustiveis": "Combustão do Pellet de resíduo de amendoin",
+  "Unidade de entrada": "Kg"
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45eaf"
+  },
+  "Combustiveis": "Combustão de carvão vegetal",
+  "Unidade de entrada": "kg",
+  "Fatores de Emissao do setor de energia CO2 TJ": 112000,
+  "Fatores de Emissao do setor de energia CH4 TJ": 200,
+  "Fatores de Emissao do setor de energia N2O TJ": 4,
+  "PCI MJ": 15.8,
+  "PCI TJ": 0.0000158,
+  "Fator de conversao de medida": 1,
+  "Fatores de Emissao do setor de energia CO2 Un": 1.7696,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.00316,
+  "Fatores de Emissao do setor de energia N2O Un": 0.0000632,
+  "Fator de emissão CO2 eq unidade": 1.88,
+  "Fator de emissão CO2 eq MJ": 0.1191
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45eab"
+  },
+  "Combustiveis": "Combustão de Etanol anidro",
+  "Unidade de entrada": "litro",
+  "Fatores de Emissao do setor de energia CO2 TJ": 79600,
+  "Fatores de Emissao do setor de energia CH4 TJ": 3,
+  "Fatores de Emissao do setor de energia N2O TJ": 0.6,
+  "PCI MJ": 28.26,
+  "PCI TJ": 0.00002826,
+  "Fator de conversao de medida": 0.791,
+  "Fatores de Emissao do setor de energia CO2 Un": 1.779351336,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.00006706098,
+  "Fatores de Emissao do setor de energia N2O Un": 0.000013412196,
+  "Fator de emissão CO2 eq unidade": 1.79
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45eae"
+  },
+  "Combustiveis": "Combustão de Lenha / Lenha residual",
+  "Unidade de entrada": "kg",
+  "Fatores de Emissao do setor de energia CO2 TJ": 112000,
+  "Fatores de Emissao do setor de energia CH4 TJ": 30,
+  "Fatores de Emissao do setor de energia N2O TJ": 4,
+  "PCI MJ": 17.3,
+  "PCI TJ": 0.0000173,
+  "Fator de conversao de medida": 1,
+  "Fatores de Emissao do setor de energia CO2 Un": 1.9376,
+  "Fatores de Emissao do setor de energia CH4 Un": 0.000519,
+  "Fatores de Emissao do setor de energia N2O Un": 0.0000692,
+  "Fator de emissão CO2 eq unidade": 1.97,
+  "Fator de emissão CO2 eq MJ": 0.114
+},
+{
+  "_id": {
+    "$oid": "690965940217091b94a45eb2"
+  },
+  "Combustiveis": "Combustão do Pellet de resíduo de Eucalipto",
+  "Unidade de entrada": "Kg"
+}]
