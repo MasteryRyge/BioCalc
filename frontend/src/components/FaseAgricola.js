@@ -271,55 +271,124 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola}) {
         funcaoResultadoAgricola(Number(ImpactoTotal) + Number(ImpactoMUT) + Number(ImpactoTransporteBiomassa))
 
     }, [ImpactoTotal, ImpactoMUT, ImpactoTransporteBiomassa]);
-    
+
     useEffect(() => {
 
         setImpactoTransporteBiomassa(EmissaoProcessoVeiculo * (QuantidadeMediaBiomassaTransportada * DistanciaTransporte))
-        
+
     }, [EmissaoProcessoVeiculo, QuantidadeMediaBiomassaTransportada, DistanciaTransporte])
 
 
     return (
         <>
-            <div className="container mt-4">
-                <div className="col-md-8">
+            <div className="container mt-4 d-flex flex-column justify-content-center align-items-center">
+                <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-2"
+                    style={{backgroundColor: "#76b852", fontSize: "1.2rem", borderRadius: "4px"}}>
+                    Fase Agricola e transporte da biomassa até a fábrica
+                </div>
+                <div className="col-md-11">
                     <div className="mb-5" id="producaoBiomassa">
-                        <h2 className="mb-3">Produção de Biomassa</h2>
                         <label>Tipo de Biomassa (Ex. Pinus, Casca de amendoim, etc.)</label>
-                        <select className="form-select mb-3" id="insumo" onChange={mudaInsumo}>
-                            <option value="">Selecione...</option>
-                            {biomassas.map((tipo, index) => (
-                                <option key={index} value={tipo}>
-                                    {tipo}
-                                </option>
-                            ))}
-                        </select>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <select className="form-select" id="insumo" onChange={mudaInsumo}>
+                                    <option value="">Selecione...</option>
+                                    {biomassas.map((tipo, index) => (
+                                        <option key={index} value={tipo}>
+                                            {tipo}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            <div className="col-md-3">
+                                <span>Selecionar na lista suspensa</span>
+                            </div>
+
+                        </div>
 
                         <label>Possui informação sobre o consumo de Biomassa (em kg de biomassa por kg de
                             biocombustivel)?</label>
-                        <select className="form-select mb-3" onChange={mudaDadoEspecifico}>
-                            <option>Não</option>
-                            <option>Sim</option>
-                        </select>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <select className="form-select mb-3" onChange={mudaDadoEspecifico}>
+                                    <option>Não</option>
+                                    <option>Sim</option>
+                                </select>
+                            </div>
+                            <div className="col-md-3">
+                                <span>Selecionar na lista suspensa</span>
+                            </div>
+
+                        </div>
 
                         <label>Entrada de biomassa - dado especifico
                             (se não possuir a informação, não preencher, será considerado o dado padrão)</label>
-                        <input className="form-control" type="number" onChange={mudaValorDadoEspecifico}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaValorDadoEspecifico}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg de biomassa / kg de biocombustível</span>
+                            </div>
+
+                        </div>
 
                         <label>Fator de impacto da biomassa selecionada (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text" value={EmissaoBiomassaAlocada} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={EmissaoBiomassaAlocada}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq./ kg biomassa</span>
+                            </div>
+
+                        </div>
 
                         <label>Poder calorífico da biomassa selecionada (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text" value={PoderCalorico} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={PoderCalorico} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg / MJ de biocombustível</span>
+                            </div>
+
+                        </div>
 
                         <label>Entrada de amido de milho</label>
-                        <input className="form-control" type="number" defaultValue='0' onChange={mudaMilho}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" defaultValue='0' onChange={mudaMilho}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg / MJ de biocombustível</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto associado ao consumo de amido de milho (preenchimento automático)</label>
-                        <input className="form-control" type="number" value={ImpactoMilho} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoMilho} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq / MJ</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto da produção de biomassa</label>
-                        <input className="form-control" type="number" value={ImpactoTotal} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoTotal} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq. / MJ de biocombustível</span>
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -327,37 +396,87 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola}) {
                         <h2 className="mb-3">Mudança de uso da terra</h2>
 
                         <label>Estado da produção da Biomassa</label>
-                        <select className="form-select mb-3" id="estado" onChange={mudaEstado}>
-                            <option value="">Selecione...</option>
-                            {ListaEstados.map((tipo, index) => (
-                                <option key={index} value={tipo}>
-                                    {tipo}
-                                </option>
-                            ))}
-                        </select>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <select className="form-select mb-3" id="estado" onChange={mudaEstado}>
+                                    <option value="">Selecione...</option>
+                                    {ListaEstados.map((tipo, index) => (
+                                        <option key={index} value={tipo}>
+                                            {tipo}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="col-md-3">
+                                <span>Selecionar na lista suspensa</span>
+                            </div>
+
+                        </div>
 
                         <label>Cultivo agrícola (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text" value={CultivoAgricola} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={CultivoAgricola} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>-</span>
+                            </div>
+
+                        </div>
 
                         <label>Se resíduo de madeira, informe qual etapa do ciclo de vida da madeira os resíduos foram
                             obtidos</label>
-                        <select value={ResiduoMadeiraEscolhido} className="form-select mb-3" id="residuos" onChange={mudaResiduo}>
-                            <option value="">Selecione...</option>
-                            {ResiduoMadeira.map((tipo, index) => (
-                                <option key={index} value={tipo}>
-                                    {tipo}
-                                </option>
-                            ))}
-                        </select>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <select value={ResiduoMadeiraEscolhido} className="form-select mb-3" id="residuos"
+                                        onChange={mudaResiduo}>
+                                    <option value="">Selecione...</option>
+                                    {ResiduoMadeira.map((tipo, index) => (
+                                        <option key={index} value={tipo}>
+                                            {tipo}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="col-md-3">
+                                <span>Selecionar na lista suspensa</span>
+                            </div>
+
+                        </div>
 
                         <label>Fator de impacto do MUT (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text" value={FatorImpactoMut} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={FatorImpactoMut} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq./ kg biomassa</span>
+                            </div>
+
+                        </div>
 
                         <label>Percentual de alocação da biomassa (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text" value={PercentualAlocacaoBiomassa} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={PercentualAlocacaoBiomassa}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>%</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto MUT</label>
-                        <input className="form-control mb-3" type="text" value={ImpactoMUT} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={ImpactoMUT} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq. / MJ de biocombustivel</span>
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -366,29 +485,71 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola}) {
                         <h2 className='mb-3'>Transporte da biomassa até a planta industrial</h2>
 
                         <label>Distância de transporte da biomassa até a fábrica</label>
-                        <input className="form-control" type="number" onChange={mudaDistanciaTransporte}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaDistanciaTransporte}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>km</span>
+                            </div>
+
+                        </div>
 
 
                         <label>Tipo de veículo usado no transporte</label>
-                        <select className="form-select mb-3" id="tipoVeiculo" onChange={mudaTipoVeiculo}>
-                            <option value="">Selecione...</option>
-                            {TiposVeiculos.map((tipo, index) => (
-                                <option key={index} value={tipo}>
-                                    {tipo}
-                                </option>
-                            ))}
-                        </select>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <select className="form-select mb-3" id="tipoVeiculo" onChange={mudaTipoVeiculo}>
+                                    <option value="">Selecione...</option>
+                                    {TiposVeiculos.map((tipo, index) => (
+                                        <option key={index} value={tipo}>
+                                            {tipo}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="col-md-3">
+                                <span>Selecionar na lista suspensa</span>
+                            </div>
+
+                        </div>
 
                         <label>Quantidade média de Biomassa transportada por veículo (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text" value={QuantidadeMediaBiomassaTransportada}
-                               readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text"
+                                       value={QuantidadeMediaBiomassaTransportada}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>tonelada</span>
+                            </div>
+
+                        </div>
 
                         <label>Demanda de transporte (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text"
-                               value={QuantidadeMediaBiomassaTransportada * DistanciaTransporte} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text"
+                                       value={QuantidadeMediaBiomassaTransportada * DistanciaTransporte} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>t.km</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto do transporte da biomassa</label>
-                        <input className="form-control mb-3" type="text" value={ImpactoTransporteBiomassa} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={ImpactoTransporteBiomassa}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq. / MJ de biocombustivel</span>
+                            </div>
+
+                        </div>
 
 
                     </div>

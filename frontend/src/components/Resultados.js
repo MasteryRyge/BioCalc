@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import { useMemo } from "react";
 
 import {Pie} from "react-chartjs-2";
 
@@ -6,13 +7,33 @@ import {
     Chart as ChartJS,
     ArcElement,
     Tooltip,
-    Legend
+    Legend,
+    Title
 } from "chart.js";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 
 function Resultados({temp}) {
+
+
+
+    const options = useMemo(() => ({
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: "left",
+            },
+            title: {
+                display: true,
+                text: "Consumo por Tipo de Combustível",
+                font: {
+                    size: 20,
+                },
+            },
+        },
+    }), []);
+
 
 
     const [IntensidadeCarbonoSoma, setIntensidadeCarbonoSoma] = useState(0)
@@ -256,7 +277,11 @@ function Resultados({temp}) {
     return (
 
         <>
-            <div className="container mt-4">
+            <div className="container mt-4 d-flex flex-column justify-content-center align-items-center">
+                <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-2"
+                     style={{backgroundColor: "#9a9a9a", fontSize: "1.2rem", borderRadius: "4px"}}>
+                    Resultados
+                </div>
                 <div className="col-md-8 mb-5">
                     <table className="table table-bordered mb-5">
                         <thead>
@@ -338,10 +363,21 @@ function Resultados({temp}) {
                         </tbody>
                     </table>
 
-                    <Pie data={dataContribuicaoEtapasCicloVida}/>
+
+                    <div style={{width: "400px", height: "400px"}}>
+                        <Pie data={dataContribuicaoEtapasCicloVida} options={options}/>
+                    </div>
+
+                </div>
+
+                <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-4"
+                     style={{backgroundColor: "#9a9a9a", fontSize: "1.2rem", borderRadius: "4px"}}>
                 </div>
 
                 <div className="col-md-8">
+
+                    <h4 className="mb-3">Considerando carga nula na fase agricola, quando resíduo</h4>
+
                     <table className="table table-bordered mb-5">
                         <thead>
                         <tr>
@@ -416,11 +452,17 @@ function Resultados({temp}) {
                         </tr>
                         </tbody>
                     </table>
-
-                    <Pie data={dataContribuicaoEtapasCicloVida2}/>
+                    <div style={{width: "400px", height: "400px"}}>
+                        <Pie data={dataContribuicaoEtapasCicloVida2} options={options}/>
+                    </div>
                 </div>
-
+                <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-4"
+                     style={{backgroundColor: "#9a9a9a", fontSize: "1.2rem", borderRadius: "4px"}}>
+                </div>
                 <div className="col-md-8">
+
+                    <h4 className="mb-3">Considerando a aplicação da Circular Footprint Formula (CFF)</h4>
+
                     <table className="table table-bordered mb-5">
                         <thead>
                         <tr>

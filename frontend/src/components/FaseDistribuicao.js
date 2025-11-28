@@ -280,110 +280,294 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
     return (
 
         <>
-            <div className="container mt-4">
-                <div className="col-md-8">
+            <div className="container mt-4 d-flex flex-column justify-content-center align-items-center">
+                <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-2"
+                     style={{backgroundColor: "#76b852", fontSize: "1.2rem", borderRadius: "4px"}}>
+                    Fase de Distribuição
+                </div>
+
+                <div className="text-center mb-4">
+                    Forneça a distancia do produto final até o mercado consumidor doméstico e o seu respectivo modal de transporte em percentual (caso seja modal único, preencher como 100%)
+                    <br/>(Deixar em branco quando não aplicável)
+                </div>
+
+                <div className="col-md-11">
                     <div className="mb-5" id="mercadoDomestico">
                         <h2 className="mb-3">Mercado doméstico</h2>
 
                         <label>Quantidade de biomassa transportada no mercado doméstico</label>
-                        <input className="form-control" type="number" onChange={mudaQuantidadeBiomassaTransportada}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number"
+                                       onChange={mudaQuantidadeBiomassaTransportada}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>tonelada</span>
+                            </div>
+
+                        </div>
 
                         <label>Distância de transporte do produto final até o mercado consumidor doméstico</label>
-                        <input className="form-control" type="number" onChange={mudaDistanciaTransporteProdutoFinal}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number"
+                                       onChange={mudaDistanciaTransporteProdutoFinal}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>km</span>
+                            </div>
+
+                        </div>
 
                         <label>Ferroviário - Refere-se ao percentual da distância mensal do biocombustível
-                            comercializado que é distribuido exclusivamente por via ferroviária</label>
-                        <input className="form-control" type="number" onChange={mudaFerroviario}/>
+                            comercializado que é distribuido exclusivamente<br/> por via ferroviária</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaFerroviario}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>%</span>
+                            </div>
+
+                        </div>
 
                         <label>Hidroviário - Refere-se ao percentual da distância mensal do biocombustível
-                            comercializado que é distribuido exclusivamente por via hidroviária</label>
-                        <input className="form-control" type="number" onChange={mudaHidroviario}/>
+                            comercializado que é distribuido exclusivamente<br/> por via hidroviária</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaHidroviario}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>%</span>
+                            </div>
+
+                        </div>
 
                         <label>Rodoviário -Refere-se ao percentual da distância mensal do biocombustível comercializado
-                            que é distribuido exclusivamente por via rodoviária</label>
-                        <input className="form-control mb-3" type="text" value={(1 - (Ferroviario + Hidroviario)) * 100}
-                               readOnly/>
+                            que é distribuido exclusivamente<br/> por via rodoviária</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text"
+                                       value={(1 - (Ferroviario + Hidroviario)) * 100}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>%</span>
+                            </div>
+
+                        </div>
 
                         <label>Tipo de veículo usado no transporte rodoviário</label>
-                        <select className="form-select mb-3" id="tipoVeiculoRodoviario"
-                                onChange={mudaTipoVeiculoRodoviario}>
-                            <option value="">Selecione...</option>
-                            {ListaCaminhoes.map((tipo, index) => (
-                                <option key={index} value={tipo}>
-                                    {tipo}
-                                </option>
-                            ))}
-                        </select>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <select className="form-select mb-3" id="tipoVeiculoRodoviario"
+                                        onChange={mudaTipoVeiculoRodoviario}>
+                                    <option value="">Selecione...</option>
+                                    {ListaCaminhoes.map((tipo, index) => (
+                                        <option key={index} value={tipo}>
+                                            {tipo}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="col-md-3">
+                                <span></span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto da fase de distribuição no mercado doméstico (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text" value={ImpactoFaseDistribuicao} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={ImpactoFaseDistribuicao}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq./ano</span>
+                            </div>
+
+                        </div>
 
                         <label>MJ transportado anualmente (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text" value={MJTransportadoAnual} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={MJTransportadoAnual} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>MJ/ano</span>
+                            </div>
+
+                        </div>
 
 
                         <label>Impacto da distribuição no mercado doméstico (preenchimento automático)</label>
-                        <input className="form-control mb-3" type="text" value={ImpactoDistribuicaoMercado} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={ImpactoDistribuicaoMercado}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq. / MJ transportado</span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div className="mb-5" id="exportacaoMaritimo">
+                        <h2 className="mb-3">Exportação - via container marítimo</h2>
+
+                        <div className="mb-4">
+                            Caso tenha interesse em saber o impacto da exportação do seu produto, preencha os dados abaixo. Deixar em branco quando não aplicável
+                        </div>
+
+                        <label>Quantidade de biocombustível sólido exportado via container marítimo</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaQuantidadeBiocombustivel}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>tonelada(s)</span>
+                            </div>
+
+                        </div>
+
+                        <label>Distância da fabrica ao porto hidroviário mais próximo</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaDistanciaFabricaPorto}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>km</span>
+                            </div>
+
+                        </div>
+
+                        <label>Ferroviário - Refere-se ao percentual da distância até o porto hidroviário distribuido
+                            exclusivamente por via ferroviária</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaFerroviarioPorto}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>%</span>
+                            </div>
+
+                        </div>
+
+                        <label>Hidroviário - Refere-se ao percentual da distância até o porto hidroviário distribuido
+                            exclusivamente por via hidroviária</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaHidroviarioPorto}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>%</span>
+                            </div>
+
+                        </div>
+
+                        <label>Rodoviário - Refere-se ao percentual da distância até o porto hidroviário distribuido
+                            exclusivamente por via rodoviária</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text"
+                                       value={(1 - (FerroviarioPorto + HidroviarioPorto)) * 100} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>%</span>
+                            </div>
+
+                        </div>
+
+                        <label>Tipo de veículo usado no transporte rodoviário até o porto</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <select className="form-select mb-3" id="tipoVeiculoRodoviarioPorto"
+                                        onChange={mudaTipoVeiculoRodoviarioPorto}>
+                                    <option value="">Selecione...</option>
+                                    {ListaCaminhoes.map((tipo, index) => (
+                                        <option key={index} value={tipo}>
+                                            {tipo}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="col-md-3">
+                                <span></span>
+                            </div>
+
+                        </div>
+
+
+                        <label>Distância do porto hidroviário ao mercado consumidor final - Consulta pode ser efetuada
+                            no
+                            site: searates.com</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number"
+                                       onChange={mudaDistanciaPortoHidroviarioMercado}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>km</span>
+                            </div>
+
+                        </div>
+
+
+                        <label>Impacto da fase de distribuição no mercado externo (trecho fabrica-porto)</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={ImpactoFaseDistribuicaoExterno}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq./ano</span>
+                            </div>
+
+                        </div>
+
+                        <label>Impacto da fase de distribuição no mercado externo (trecho porto - mercado consumidor
+                            final)</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text"
+                                       value={ImpactoFaseDistribuicaoExternoPorto}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq./ano</span>
+                            </div>
+
+                        </div>
+
+                        <label>MJ exportado por ano (preenchimento automático)</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={MJExportadoAnual} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>MJ/ano</span>
+                            </div>
+
+                        </div>
+
+                        <label>Impacto da exportação (preenchimento automático)</label>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control mb-3" type="text" value={ImpactoExportacao} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq. / MJ transportado</span>
+                            </div>
+
+                        </div>
 
 
                     </div>
                 </div>
-
-                <div className="mb-5" id="mercadoDomestico">
-                    <h2 className="mb-3">Exportação - via container marítimo</h2>
-
-                    <label>Quantidade de biocombustível sólido exportado via container marítimo</label>
-                    <input className="form-control" type="number" onChange={mudaQuantidadeBiocombustivel}/>
-
-                    <label>Distância da fabrica ao porto hidroviário mais próximo</label>
-                    <input className="form-control" type="number" onChange={mudaDistanciaFabricaPorto}/>
-
-                    <label>Ferroviário - Refere-se ao percentual da distância até o porto hidroviário distribuido
-                        exclusivamente por via ferroviária</label>
-                    <input className="form-control" type="number" onChange={mudaFerroviarioPorto}/>
-
-                    <label>Hidroviário - Refere-se ao percentual da distância até o porto hidroviário distribuido
-                        exclusivamente por via hidroviária</label>
-                    <input className="form-control" type="number" onChange={mudaHidroviarioPorto}/>
-
-                    <label>Rodoviário - Refere-se ao percentual da distância até o porto hidroviário distribuido
-                        exclusivamente por via rodoviária</label>
-                    <input className="form-control mb-3" type="text"
-                           value={(1 - (FerroviarioPorto + HidroviarioPorto)) * 100} readOnly/>
-
-                    <label>Tipo de veículo usado no transporte rodoviário até o porto</label>
-                    <select className="form-select mb-3" id="tipoVeiculoRodoviarioPorto"
-                            onChange={mudaTipoVeiculoRodoviarioPorto}>
-                        <option value="">Selecione...</option>
-                        {ListaCaminhoes.map((tipo, index) => (
-                            <option key={index} value={tipo}>
-                                {tipo}
-                            </option>
-                        ))}
-                    </select>
-
-
-                    <label>Distância do porto hidroviário ao mercado consumidor final - Consulta pode ser efetuada no
-                        site: searates.com</label>
-                    <input className="form-control" type="number" onChange={mudaDistanciaPortoHidroviarioMercado}/>
-
-
-                    <label>Impacto da fase de distribuição no mercado externo (trecho fabrica-porto)</label>
-                    <input className="form-control mb-3" type="text" value={ImpactoFaseDistribuicaoExterno} readOnly/>
-
-                    <label>Impacto da fase de distribuição no mercado externo (trecho porto - mercado consumidor
-                        final)</label>
-                    <input className="form-control mb-3" type="text" value={ImpactoFaseDistribuicaoExternoPorto} readOnly/>
-
-                    <label>MJ exportado por ano (preenchimento automático)</label>
-                    <input className="form-control mb-3" type="text" value={MJExportadoAnual} readOnly/>
-
-                    <label>Impacto da exportação (preenchimento automático)</label>
-                    <input className="form-control mb-3" type="text" value={ImpactoExportacao} readOnly/>
-
-
-                </div>
-
             </div>
         </>
 

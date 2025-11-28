@@ -449,26 +449,61 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
 
         <>
 
-            <div className="container mt-4">
-                <div className="col-md-8">
+            <div className="container mt-4 d-flex flex-column justify-content-center align-items-center">
+                <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-2"
+                     style={{backgroundColor: "#76b852", fontSize: "1.2rem", borderRadius: "4px"}}>
+                    Fase Industrial - Processamento (Secagem e Densificação da biomassa)
+                </div>
+                <div className="text-center mb-4">
+                    Informações sobre os elementos envolvidos na fase de produção do Biocombustível - Inserir os dados referentes ao consumo anual da unidade de fabricação
+                    <br/>(Caso o elemento não seja utilizado, deixar em branco)
+                </div>
+
+                <div className="col-md-11">
                     <div className="mb-5" id="dadosDoSistema">
                         <h2 className="mb-3">Dados do sistema</h2>
 
 
                         <label>Existe co-geração de energia (aproveitamento da biomassa na geração de energia)</label>
-                        <select className="form-select mb-3" onChange={mudaCogeracaoEnergia}>
-                            <option>Não</option>
-                            <option>Sim</option>
-                        </select>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <select className="form-select mb-3" onChange={mudaCogeracaoEnergia}>
+                                    <option>Não</option>
+                                    <option>Sim</option>
+                                </select>
+                            </div>
+                            <div className="col-md-3">
+                                <span></span>
+                            </div>
+
+                        </div>
 
                         <label>Quantidade de biomassa processada - (não considerar a biomassa usada na co-geração, se
                             houver)</label>
-                        <input className="form-control" type="number" onChange={mudaQuantidadeBiomassaProcessada}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number"
+                                       onChange={mudaQuantidadeBiomassaProcessada}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg/ano</span>
+                            </div>
+
+                        </div>
 
 
                         <label>"Quantidade de biomassa consumida na co-geração? - (Considerando a mesma biomassa obtida
                             na fase agricola)"</label>
-                        <input className="form-control" type="number" onChange={mudaQuantidadeBiomassaConsumida}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number"
+                                       onChange={mudaQuantidadeBiomassaConsumida}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg/ano</span>
+                            </div>
+
+                        </div>
 
 
                     </div>
@@ -478,29 +513,95 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
 
 
                         <label>Eletricidade da rede - mix média voltagem</label>
-                        <input className="form-control" type="number" onChange={mudaEletricidadeRedeMedia}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaEletricidadeRedeMedia}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kWh/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Eletricidade da rede - mix alta voltagem</label>
-                        <input className="form-control" type="number" onChange={mudaEletricidadeRedeAlta}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaEletricidadeRedeAlta}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kWh/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Eletricidade - PCH</label>
-                        <input className="form-control" type="number" onChange={mudaEletricidadePCH}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaEletricidadePCH}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kWh/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Eletricidade - biomassa</label>
-                        <input className="form-control" type="number" onChange={mudaEletricidadeBiomassa}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaEletricidadeBiomassa}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kWh/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Eletricidade - eólica</label>
-                        <input className="form-control" type="number" onChange={mudaEletricidadeEolica}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaEletricidadeEolica}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kWh/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Eletricidade - solar</label>
-                        <input className="form-control" type="number" onChange={mudaEletricidadeSolar}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaEletricidadeSolar}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kWh/ano</span>
+                            </div>
+
+                        </div>
 
 
                         <label>Impacto do consumo de eletricidade (preenchimento automático)</label>
-                        <input className="form-control" type="number" value={ImpactoConsumoEletricidade} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoConsumoEletricidade}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto do consumo de eletricidade</label>
-                        <input className="form-control" type="number" value={ImpactoConsumoEletricidadeFinal} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoConsumoEletricidadeFinal}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2/MJ</span>
+                            </div>
+
+                        </div>
 
 
                     </div>
@@ -510,37 +611,128 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <h2 className="mb-3">Energia - Combustível</h2>
 
                         <label>Diesel</label>
-                        <input className="form-control" type="number" onChange={mudaDiesel}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaDiesel}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>Litros/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Gás natural</label>
-                        <input className="form-control" type="number" onChange={mudaGasNatural}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaGasNatural}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>Nm³/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>GLP</label>
-                        <input className="form-control" type="number" onChange={mudaGLP}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaGLP}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Gasolina A</label>
-                        <input className="form-control" type="number" onChange={mudaGasolinaA}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaGasolinaA}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>Litros/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Etanol anidro</label>
-                        <input className="form-control" type="number" onChange={mudaEtanolAnidro}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaEtanolAnidro}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>Litros/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Etanol hidratado</label>
-                        <input className="form-control" type="number" onChange={mudaEtanolHidratado}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaEtanolHidratado}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>Litros/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Cavaco de madeira</label>
-                        <input className="form-control" type="number" onChange={mudaCavacoMadeira}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaCavacoMadeira}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Lenha</label>
-                        <input className="form-control" type="number" onChange={mudaLenha}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaLenha}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto da produção de combustível (preenchimento automático)</label>
-                        <input className="form-control" type="number" value={ImpactoProducaoCombustivel} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoProducaoCombustivel}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto da combustão estacionária (preenchimento automático)</label>
-                        <input className="form-control" type="number" value={ImpactoCombustaoEstacionaria} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoCombustaoEstacionaria}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto do consumo de combustível (preenchimento automático)</label>
-                        <input className="form-control" type="number" value={ImpactoConsumoCombustivel} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoConsumoCombustivel}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2/MJ</span>
+                            </div>
+
+                        </div>
 
 
                     </div>
@@ -550,13 +742,40 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <h2 className="mb-3">Co-geração (Aproveitamento energético)</h2>
 
                         <label>Fator de emissão da combustão da biomassa (preenchimento automático)</label>
-                        <input className="form-control" type="number" value={emissaoBiomassaAlocadaInsumo} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={emissaoBiomassaAlocadaInsumo}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2/ kg de biomassa queimada</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto da combustão da biomassa (preenchimento automático)</label>
-                        <input className="form-control" type="number" value={ImpactoCombustaoBiomassa} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoCombustaoBiomassa}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto da combustão da biomassa (preenchimento automático)</label>
-                        <input className="form-control" type="number" value={ImpactoCombustaoBiomassaFinal} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoCombustaoBiomassaFinal}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2/MJ</span>
+                            </div>
+
+                        </div>
 
 
                     </div>
@@ -565,19 +784,60 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <h2 className="mb-3">Insumos de manufatura</h2>
 
                         <label>Água</label>
-                        <input className="form-control" type="number" onChange={mudaAgua}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaAgua}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>litros/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Óleo lubrificante</label>
-                        <input className="form-control" type="number" onChange={mudaOleoLubrificante}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaOleoLubrificante}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Areia de silica</label>
-                        <input className="form-control" type="number" onChange={mudaAreiaSilica}/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" onChange={mudaAreiaSilica}/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg/ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto da fase industrial</label>
-                        <input className="form-control" type="number" value={ImpactoFaseIndustrial} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoFaseIndustrial} readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq./ano</span>
+                            </div>
+
+                        </div>
 
                         <label>Impacto da fase industrial</label>
-                        <input className="form-control" type="number" value={ImpactoFaseIndustrialFinal} readOnly/>
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-9">
+                                <input className="form-control" type="number" value={ImpactoFaseIndustrialFinal}
+                                       readOnly/>
+                            </div>
+                            <div className="col-md-3">
+                                <span>kg CO2 eq. / MJ </span>
+                            </div>
+
+                        </div>
 
 
                     </div>

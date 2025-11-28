@@ -73,40 +73,69 @@ function Calculadora({dadosIntensidadeCarbono}) {
     return (
 
         <>
-            <div className="container mt-4">
-                <div className="col-md-8">
+            <div className="container mt-4 d-flex flex-column justify-content-center align-items-center">
+                <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-2"
+                     style={{backgroundColor: "#939393", fontSize: "1.2rem", borderRadius: "4px"}}>
+                    Calculadora para contabilização de Eficiência Energético-Ambiental para biocombustíveis sólidos (Pellets ou Briquetes)
+                </div>
+                <div className="col-md-11">
                     <div className="row g-4">
                         <div className="col-md-6 ">
                             <h2>Biocombustível Sólido (Pellet ou Briquette)</h2>
 
                             <div className="mb-3">
-                                <label className="form-label">Intensidade de Carbono<br/>(kg CO₂eq/MJ):</label>
-                                <input type="number" className="form-control col-md-4" value={IntensidadeCarbonoResultado} readOnly/>
+                                <label className="form-label">Intensidade de Carbono (kg CO₂eq/MJ):</label>
+                                <input type="number" className="form-control col-md-4"
+                                       value={IntensidadeCarbonoResultado} readOnly/>
                             </div>
 
                             <div className="mb-3">
                                 <label className="form-label">Agrícola:</label>
-                                <input type="number" className="form-control col-md-4" value={dadosIntensidadeCarbono[0]} readOnly/>
+                                <input type="number" className="form-control col-md-4"
+                                       value={dadosIntensidadeCarbono[0]} readOnly/>
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">Industrial:</label>
-                                <input type="number" className="form-control col-md-4" value={dadosIntensidadeCarbono[1]} readOnly/>
+                                <input type="number" className="form-control col-md-4"
+                                       value={dadosIntensidadeCarbono[1]} readOnly/>
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">Transporte:</label>
-                                <input type="number" className="form-control col-md-4" value={dadosIntensidadeCarbono[2]} readOnly/>
+                                <input type="number" className="form-control col-md-4"
+                                       value={dadosIntensidadeCarbono[2]} readOnly/>
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">Uso:</label>
-                                <input type="number" className="form-control col-md-4" value={dadosIntensidadeCarbono[3]} readOnly/>
+                                <input type="number" className="form-control col-md-4"
+                                       value={dadosIntensidadeCarbono[3]} readOnly/>
                             </div>
                             <div className="mb-3">
                                 <label>Nota de Eficiência Energético-Ambiental<br/>(kg CO₂eq/MJ):</label>
-                                <input type="number" className="form-control col-md-4" value={NotaEficienciaEnergetica} readOnly/>
+                                <div className="row align-items-center mb-3">
+                                    <div className="col-md-8">
+                                        <input type="number" className="form-control col-md-4"
+                                               value={NotaEficienciaEnergetica}
+                                               readOnly/>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <span style={{color: "#ff0000"}}>Resultado negativo representa impacto superior ao fóssil substituto</span>
+                                    </div>
+
+                                </div>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="email" className="form-label">Redução de emissões:</label>
-                                <input type="text" className="form-control col-md-4" value={ReducaoEmissoes + '%'} readOnly/>
+                                <div className="row align-items-center mb-3">
+                                    <div className="col-md-8">
+                                        <input type="text" className="form-control col-md-4"
+                                               value={ReducaoEmissoes + '%'}
+                                               readOnly/>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <span style={{color: "#ff0000"}}>Resultado negativo representa impacto superior ao fóssil substituto</span>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
 
@@ -114,27 +143,32 @@ function Calculadora({dadosIntensidadeCarbono}) {
                             <h2>Geração de CBIOs</h2>
 
                             <div className="mb-3">
-                                <label className="form-label">Volume de produção elegível<br/>(em Toneladas de
+                                <label className="form-label">Volume de produção elegível (em Toneladas de
                                     biocombustível)</label>
-                                <input type="number" className="form-control col-md-4" onChange={mudaVolumeProducaoElegivel}/>
+                                <input type="number" className="form-control col-md-4"
+                                       onChange={mudaVolumeProducaoElegivel}/>
                             </div>
 
                             <div className="mb-3">
                                 <label className="form-label">Possíveis créditos elegíveis (CBIOs)</label>
-                                <input type="number" className="form-control col-md-4" value={CreditosElegiveis} readOnly/>
+                                <input type="number" className="form-control col-md-4" value={CreditosElegiveis}
+                                       readOnly/>
                             </div>
                             <div className="mb-3">
-                                <label className="form-label">Valor de mercado do CBIO:B3 hoje:<br/>
+                                <label className="form-label">Valor de mercado do CBIO:B3 hoje:
                                     Consultar em: cbio.datagro.com/cbio/</label>
-                                <input type="number" className="form-control col-md-4" onChange={mudaValorMercadoCBIOB3}/>
+                                <input type="number" className="form-control col-md-4"
+                                       onChange={mudaValorMercadoCBIOB3}/>
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">Remuneração aproximada R$</label>
-                                <input type="text" className="form-control col-md-4" value={'R$ ' + (CreditosElegiveis * ValorMercadoCBIOB3)} readOnly/>
+                                <input type="text" className="form-control col-md-4"
+                                       value={'R$ ' + (CreditosElegiveis * ValorMercadoCBIOB3)} readOnly/>
                             </div>
 
                             <div className="mb-3">
-                                <label className="form-label">Fóssil substituto: Diesel A, Gasolina<br/>A e GNV (Média ponderada)</label>
+                                <label className="form-label">Fóssil substituto: Diesel A, Gasolina A e GNV (Média
+                                    ponderada)</label>
                                 <input type="number" className="form-control col-md-4" onChange={mudaFossilSubstituto}/>
                             </div>
                         </div>
