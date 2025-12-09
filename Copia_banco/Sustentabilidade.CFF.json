@@ -1,0 +1,184 @@
+[{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07c4"
+  },
+  "Nome": "Factor A",
+  "Valor": 0.5,
+  "Descricao": "A balance between supply and demand for recycled material [0.2-0.8]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07c5"
+  },
+  "Nome": "Ed",
+  "Valor": 0.4903,
+  "Descricao": "is the environmental burdens of the waste disposal"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07c6"
+  },
+  "Nome": "Ed*",
+  "Descricao": "indicates Ed is avoided through recycling",
+  "Valor": 0
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07c7"
+  },
+  "Nome": "Erin",
+  "Valor": 0,
+  "Descricao": "is the environmental burdens of the recycling process supplying recycled material to the product"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07c8"
+  },
+  "Nome": "Erout",
+  "Valor": 0,
+  "Descricao": "is the environmental burdens of the recycling process accepting materials from the produc"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07c9"
+  },
+  "Nome": "Ev",
+  "Valor": 0,
+  "Descricao": "is the environmental burdens of virgin material production"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07ca"
+  },
+  "Nome": "Ev*",
+  "Valor": 0,
+  "Descricao": "indicates Ev is avoided through recycling"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07cb"
+  },
+  "Nome": "R1",
+  "Valor": 0,
+  "Descricao": "Share of recycled material [0-1]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07cc"
+  },
+  "Nome": "R2",
+  "Valor": 0,
+  "Descricao": "the rate of recycling of material after use in the product [0-1]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07cd"
+  },
+  "Nome": "Qp",
+  "Valor": 1,
+  "Descricao": "is the quality of the material delivered by the primary production [0-1]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07ce"
+  },
+  "Nome": "Qs",
+  "Valor": 1,
+  "Descricao": "quality of material recycled from the investigated product [0-1]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07cf"
+  },
+  "Nome": "Qsin",
+  "Valor": 1,
+  "Descricao": "the quality of recycled material entering the life cycle [0-1]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d0"
+  },
+  "Nome": "Qsout",
+  "Valor": 0,
+  "Descricao": "the quality of recycled material leaving the life cycle [0-1]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d1"
+  },
+  "Nome": "S",
+  "Valor": 1,
+  "Descricao": "the quality of the recycled material divided by the quality of virgin material [0-1]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d2"
+  },
+  "Nome": "B",
+  "Valor": 0,
+  "Descricao": "allocation factor of energy recovery processes: it applies both to burdens and credits - Equalqs to 0 as default"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d3"
+  },
+  "Nome": "R3",
+  "Valor": 1,
+  "Descricao": "it is the proportion of the material in the product that is used for energy recovery at EoL"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d4"
+  },
+  "Nome": "Eer",
+  "Valor": 0,
+  "Descricao": "specific emissions and resources consumed (per functional unit) arising from the energy recovery process (e.g. incineration with energy recovery, landfill with energy recovery, …)"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d5"
+  },
+  "Nome": "LHV (Biomass)",
+  "Valor": 12.1417,
+  "Descricao": "lower heating value for Biomass[MJ/kg]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d6"
+  },
+  "Nome": "LHV (Biofuel)",
+  "Valor": 6.1852,
+  "Descricao": "lower heating value for densified Biofuel[MJ/kg]"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d7"
+  },
+  "Nome": "Xerheat",
+  "Valor": 1,
+  "Descricao": "the efficiency of the energy recovery process for heat"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d8"
+  },
+  "Nome": "Eseheat (GWP)",
+  "Valor": 0.85,
+  "Descricao": "specific emissions and resources consumed (per functional unit) that would have arisen from the specific substituted energy source. For this case, heat"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07d9"
+  },
+  "Nome": "Xerelec",
+  "Valor": 0,
+  "Descricao": "the efficiency of the energy recovery process for elec"
+},
+{
+  "_id": {
+    "$oid": "69379be8b18decdd618c07da"
+  },
+  "Nome": "Eseelec",
+  "Valor": 0.35,
+  "Descricao": "specific emissions and resources consumed (per functional unit) that would have arisen from the specific substituted energy source. For this case, electricity"
+}]

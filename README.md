@@ -58,6 +58,7 @@ Crie um banco de dados no **MongoDB** contendo as seguintes coleções:
 - `MassaEspecificaPoderCalorifico`
 - `MudancaUsoTerra`
 - `PoderCalorico`
+- `CFF`
 
 Para cada coleção, importe os arquivos correspondentes encontrados na pasta **Copia_banco** do projeto.
 
