@@ -464,6 +464,15 @@ function Resultados({temp}) {
                     <h4 className="mb-3">Considerando a aplicação da Circular Footprint Formula (CFF)</h4>
 
                     <table className="table table-bordered mb-5">
+                        <tbody>
+                        <tr>
+                            <th scope="col">Intensidade de Carbono do<br/>Biocombustível (kg CO₂eq/MJ)</th>
+                            <td scope="col" style={{backgroundColor: '#63afff'}}>{temp[0] + temp[1] + temp[2] + temp[3] + temp[6]}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <table className="table table-bordered mb-5">
                         <thead>
                         <tr>
                             <th scope="col"></th>

@@ -9,6 +9,7 @@ import FaseAgricola from "./components/FaseAgricola";
 import FaseIndustrial from "./components/FaseIndustrial";
 import FaseDistribuicao from "./components/FaseDistribuicao";
 import Resultados from "./components/Resultados";
+import CalculoCFF from "./components/CalculoCFF";
 
 
 function App() {
@@ -20,7 +21,11 @@ function App() {
     const [ItensidadeCarbonoDistribuicao, setItensidadeCarbonoDistribuicao] = useState(0)
     const [CombustaoEstacionariaInsumo, setCombustaoEstacionariaInsumo] = useState(0)
     const [MJKgInsumo, setMJKgInsumo] = useState(0)
-    const [Tabela1, setTabela1] = useState([0,0,0,0,0])
+    const [MJKgInsumoBio, setMJKgInsumoBio] = useState(0)
+    const [Tabela1, setTabela1] = useState([0,0,0,0,0,0,0])
+    const [ImpactoTransporteBiomassa, setImpactoTransporteBiomassa] = useState(0)
+    const [ImpactoTotal, setImpactoTotal] = useState(0)
+    const [TotalCFF, setTotalCFF] = useState(0)
 
     function recebeInsumo (dado) {
 
@@ -29,6 +34,7 @@ function App() {
         setCombustaoEstacionariaInsumo(dado["Combustao estacionaria (queima em caldeira)"]);
 
         setMJKgInsumo(dado["MJ/kg"])
+        setMJKgInsumoBio(dado["MJ/kg Biocombustivel"])
 
         fetch(`http://localhost:5000/count/${encodeURIComponent(dado["Fontes de Biomassa"] + " (combustão)")}`)
             .then(res => res.json())
@@ -46,6 +52,21 @@ function App() {
         
     }
 
+    function recebeDadosCFF (dado1, dado2) {
+
+        setImpactoTotal(dado1);
+
+        setImpactoTransporteBiomassa(dado2);
+
+
+    }
+
+    function recebeTotalCFF (dado) {
+
+        setTotalCFF(dado);
+
+    }
+
     function recebeIndustrial (dado) {
 
 
@@ -55,17 +76,15 @@ function App() {
 
     function recebeDistribuicao (dado) {
 
-        console.log(dado)
-
         setItensidadeCarbonoDistribuicao(dado)
 
     }
 
     useEffect(() => {
         
-        setTabela1([ItensidadeCarbonoAgricola, ItensidadeCarbonoIndustrial, ItensidadeCarbonoDistribuicao, CombustaoEstacionariaInsumo, MJKgInsumo])
+        setTabela1([ItensidadeCarbonoAgricola, ItensidadeCarbonoIndustrial, ItensidadeCarbonoDistribuicao, CombustaoEstacionariaInsumo, MJKgInsumo, MJKgInsumoBio, TotalCFF])
         
-    }, [ItensidadeCarbonoAgricola, ItensidadeCarbonoIndustrial, ItensidadeCarbonoDistribuicao, CombustaoEstacionariaInsumo, MJKgInsumo]);
+    }, [ItensidadeCarbonoAgricola, ItensidadeCarbonoIndustrial, ItensidadeCarbonoDistribuicao, CombustaoEstacionariaInsumo, MJKgInsumo, MJKgInsumoBio, TotalCFF]);
 
 
 
@@ -73,9 +92,11 @@ function App() {
     <div className="App">
       <header className="App-header">
 
+          <CalculoCFF dadosIntensidadeCarbono={Tabela1} ImpactoTransporteBiomassa = {ImpactoTransporteBiomassa} ImpactoTotal = {ImpactoTotal} funcaoTotalCFF={recebeTotalCFF}/>
+
           <Calculadora dadosIntensidadeCarbono={Tabela1} combustaoEstacionariaInsumoEscolhido={CombustaoEstacionariaInsumo}/>
 
-          <FaseAgricola funcaoInsumo={recebeInsumo} funcaoResultadoAgricola={recebeAgricola}/>
+          <FaseAgricola funcaoInsumo={recebeInsumo} funcaoResultadoAgricola={recebeAgricola} funcaoDadosCFF={recebeDadosCFF}/>
 
           <FaseIndustrial poderCalorificoInsumo = {InsumoEscolhido['g/MJ']/1000}
                           emissaoBiomassaAlocadaInsumo = {EmissaoBiomassaAlocadaInsumo}

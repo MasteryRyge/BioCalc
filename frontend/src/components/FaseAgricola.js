@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola}) {
+function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
 
     //produção de biomassas
 
@@ -271,6 +271,12 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola}) {
         funcaoResultadoAgricola(Number(ImpactoTotal) + Number(ImpactoMUT) + Number(ImpactoTransporteBiomassa))
 
     }, [ImpactoTotal, ImpactoMUT, ImpactoTransporteBiomassa]);
+
+    useEffect(() => {
+
+        funcaoDadosCFF(ImpactoTotal, ImpactoTransporteBiomassa)
+
+    }, [ImpactoTransporteBiomassa, ImpactoTotal]);
 
     useEffect(() => {
 

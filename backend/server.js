@@ -6,6 +6,7 @@ const poderCaloricoRoutes = require('./routes/poderCaloricoRoutes');
 const mudancaUsoTerra = require('./routes/mudancaUsoTerraRoutes');
 const alocacaoMudancaUsoTerra = require('./routes/alocacaoMudancaUsoTerraRoutes');
 const combustivelFossilSubstitutoRoutes = require('./routes/combustivelFossilSubstitutoRoutes');
+const CFFRoutes = require('./routes/CFFRoutes');
 
 
 const app = express();
@@ -17,6 +18,8 @@ app.use('/', poderCaloricoRoutes);
 app.use('/', mudancaUsoTerra);
 app.use('/', alocacaoMudancaUsoTerra);
 app.use('/', combustivelFossilSubstitutoRoutes);
+app.use('/', CFFRoutes);
+
 
 
 
