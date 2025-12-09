@@ -1,0 +1,504 @@
+[{
+  "_id": {
+    "$oid": "690960f70217091b94a45e76"
+  },
+  "Estado ": "Amazonas",
+  "Taxa de emissao Pinus ": 0,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0,
+  "Taxa de emissao Eucalipto": 0,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0,
+  "Taxa de emissao Amendoin": 0,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e7b"
+  },
+  "Estado ": "Goiás",
+  "Taxa de emissao Pinus ": -2.09,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00209,
+  "Taxa de emissao Eucalipto": -2.09,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.0007091156993,
+  "Taxa de emissao Amendoin": 4.2,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0004005168575
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e7f"
+  },
+  "Estado ": "Minas Gerais",
+  "Taxa de emissao Pinus ": 0.38,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.00038,
+  "Taxa de emissao Eucalipto": 0.38,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.0001289301271,
+  "Taxa de emissao Amendoin": 1.49,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001420881232
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e82"
+  },
+  "Estado ": "Paraná",
+  "Taxa de emissao Pinus ": 0.01,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.00001,
+  "Taxa de emissao Eucalipto": 0.01,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.000003392898083,
+  "Taxa de emissao Amendoin": 0.72,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.00006866003271
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e85"
+  },
+  "Estado ": "Rio de Janeiro",
+  "Taxa de emissao Pinus ": 3.79,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.00379,
+  "Taxa de emissao Eucalipto": 3.79,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.001285908373,
+  "Taxa de emissao Amendoin": 1.59,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001516242389
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e77"
+  },
+  "Estado ": "Bahia",
+  "Taxa de emissao Pinus ": -0.59,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00059,
+  "Taxa de emissao Eucalipto": -0.59,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.0002001809869,
+  "Taxa de emissao Amendoin": 0,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e78"
+  },
+  "Estado ": "Ceará",
+  "Taxa de emissao Pinus ": 0,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0,
+  "Taxa de emissao Eucalipto": 0,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0,
+  "Taxa de emissao Amendoin": 2.05,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001954903709
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e79"
+  },
+  "Estado ": "Distrito Federal",
+  "Taxa de emissao Pinus ": -1.19,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00119,
+  "Taxa de emissao Eucalipto": -1.19,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.0004037548718,
+  "Taxa de emissao Amendoin": 1.56,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001487634042
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e7e"
+  },
+  "Estado ": "Mato Grosso do Sul",
+  "Taxa de emissao Pinus ": -2.65,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00265,
+  "Taxa de emissao Eucalipto": -2.65,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.0008991179919,
+  "Taxa de emissao Amendoin": 2.55,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0002431709492
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e84"
+  },
+  "Estado ": "Piauí",
+  "Taxa de emissao Pinus ": -1.45,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00145,
+  "Taxa de emissao Eucalipto": -1.45,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.000491970222,
+  "Taxa de emissao Amendoin": 0.48,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.00004577335514
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e87"
+  },
+  "Estado ": "Rio Grande do Sul",
+  "Taxa de emissao Pinus ": 0.5,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.0005,
+  "Taxa de emissao Eucalipto": 0.5,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.0001696449041,
+  "Taxa de emissao Amendoin": 0,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e88"
+  },
+  "Estado ": "Rondônia",
+  "Taxa de emissao Pinus ": 15.79,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.01579,
+  "Taxa de emissao Eucalipto": 15.79,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.005357386073,
+  "Taxa de emissao Amendoin": 1.64,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001563922967
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e8d"
+  },
+  "Estado ": "Tocantins",
+  "Taxa de emissao Pinus ": 9.16,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.00916,
+  "Taxa de emissao Eucalipto": 9.16,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.003107894644,
+  "Taxa de emissao Amendoin": 2.1,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0002002584287
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e74"
+  },
+  "Estado ": "Alagoas",
+  "Taxa de emissao Pinus ": 0,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0,
+  "Taxa de emissao Eucalipto": 0,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0,
+  "Taxa de emissao Amendoin": 0,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e7a"
+  },
+  "Estado ": "Espírito Santo",
+  "Taxa de emissao Pinus ": -0.34,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00034,
+  "Taxa de emissao Eucalipto": -0.34,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.0001153585348,
+  "Taxa de emissao Amendoin": 0,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e7c"
+  },
+  "Estado ": "Maranhao",
+  "Taxa de emissao Pinus ": 8.73,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.00873,
+  "Taxa de emissao Eucalipto": 8.73,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.002962000026,
+  "Taxa de emissao Amendoin": 0,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e7d"
+  },
+  "Estado ": "Mato Grosso",
+  "Taxa de emissao Pinus ": -2.29,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00229,
+  "Taxa de emissao Eucalipto": -2.29,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.0007769736609,
+  "Taxa de emissao Amendoin": 9.71,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.00092595683
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e80"
+  },
+  "Estado ": "Pará",
+  "Taxa de emissao Pinus ": 12.23,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.01223,
+  "Taxa de emissao Eucalipto": 12.23,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.004149514355,
+  "Taxa de emissao Amendoin": 1.79,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001706964702
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e81"
+  },
+  "Estado ": "Paraíba",
+  "Taxa de emissao Pinus ": -4.43,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00443,
+  "Taxa de emissao Eucalipto": -4.43,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.001503053851,
+  "Taxa de emissao Amendoin": 16.7,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.001592531314
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e83"
+  },
+  "Estado ": "Pernambuco",
+  "Taxa de emissao Pinus ": -4.06,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00406,
+  "Taxa de emissao Eucalipto": -4.06,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.001377516622,
+  "Taxa de emissao Amendoin": 1.36,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001296911729
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e89"
+  },
+  "Estado ": "Roraima",
+  "Taxa de emissao Pinus ": 11.18,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.01118,
+  "Taxa de emissao Eucalipto": 11.18,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.003793260056,
+  "Taxa de emissao Amendoin": 6.09,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0005807494433
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e8b"
+  },
+  "Estado ": "Sao Paulo",
+  "Taxa de emissao Pinus ": -0.48,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00048,
+  "Taxa de emissao Eucalipto": -0.48,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.000162859108,
+  "Taxa de emissao Amendoin": 1.48,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001411345117
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e8c"
+  },
+  "Estado ": "Sergipe",
+  "Taxa de emissao Pinus ": -3.09,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": -0.00309,
+  "Taxa de emissao Eucalipto": -3.09,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": -0.001048405508,
+  "Taxa de emissao Amendoin": 1.82,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001735573049
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e8e"
+  },
+  "Estado ": "Brasil",
+  "Taxa de emissao Pinus ": 0.07,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.00007,
+  "Taxa de emissao Eucalipto": 0.07,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.00002375028658,
+  "Taxa de emissao Amendoin": 3.18,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0003032484778
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e73"
+  },
+  "Estado ": "Acre",
+  "Taxa de emissao Pinus ": 0,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0,
+  "Taxa de emissao Eucalipto": 0,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0,
+  "Taxa de emissao Amendoin": 1.7,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001621139661
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e75"
+  },
+  "Estado ": "Amapá",
+  "Taxa de emissao Pinus ": 7.72,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.00772,
+  "Taxa de emissao Eucalipto": 7.72,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.00261931732,
+  "Taxa de emissao Amendoin": 1.05,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0.0001001292144
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e86"
+  },
+  "Estado ": "Rio Grande do Norte",
+  "Taxa de emissao Pinus ": 0,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0,
+  "Taxa de emissao Eucalipto": 0,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0,
+  "Taxa de emissao Amendoin": 0,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0
+},
+{
+  "_id": {
+    "$oid": "690960f70217091b94a45e8a"
+  },
+  "Estado ": "Santa Catarina",
+  "Taxa de emissao Pinus ": 1.47,
+  "Tempo de producao em anos Pinus": 15,
+  "Produtividade Pinus": 15000,
+  "Emissao Final Pinus": 0.00147,
+  "Taxa de emissao Eucalipto": 1.47,
+  "Tempo de producao em anos Eucalipto": 7,
+  "Produtividade Eucalipto": 20631.33,
+  "Emissao Final Eucalipto": 0.0004987560182,
+  "Taxa de emissao Amendoin": 0,
+  "Tempo de producao em anos Amendoin": 0.27,
+  "Produtividade Amendoin": 2873,
+  "Emissao Final Amendoin": 0
+}]

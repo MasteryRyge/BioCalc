@@ -28,8 +28,8 @@ app.get("/", (req, res) => {
 })
 
 mongoose.connect("mongodb+srv://ryanmeloandrade:sustentabilidadebiocalc@sustentabilidadebio.z09luqa.mongodb.net/Sustentabilidade")
-    .then(() => console.log("✅ Conectado ao MongoDB"))
-    .catch((err) => console.error("❌ Erro ao conectar:", err));
+    .then(() => console.log("Conectado ao MongoDB"))
+    .catch((err) => console.error("Erro ao conectar:", err));
 
 
 app.listen(5000, () => console.log("Servidor rodando na porta 5000"));

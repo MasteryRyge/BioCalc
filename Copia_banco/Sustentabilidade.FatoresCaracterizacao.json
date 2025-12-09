@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "690948b574bdf94a8ad96b06"
+  },
+  "gas": "N2O - Óxido Nitroso",
+  "gwp": {
+    "kgCO2eq_kg": 273
+  },
+  "referencia": "AR6 (IPCC, 2021)"
+},
+{
+  "_id": {
+    "$oid": "690948b574bdf94a8ad96b05"
+  },
+  "gas": "CH4 - biogênico - Metano Biogênico",
+  "gwp": {
+    "kgCO2eq_kg": 27.2
+  },
+  "referencia": "AR6 (IPCC, 2021)"
+},
+{
+  "_id": {
+    "$oid": "690948b574bdf94a8ad96b03"
+  },
+  "gas": "CO2 - Dióxido de Carbono Fóssil",
+  "gwp": {
+    "kgCO2eq_kg": 1
+  },
+  "referencia": "AR6 (IPCC, 2021)"
+},
+{
+  "_id": {
+    "$oid": "690948b574bdf94a8ad96b04"
+  },
+  "gas": "CH4 - Metano Fóssil",
+  "gwp": {
+    "kgCO2eq_kg": 29.8
+  },
+  "referencia": "AR6 (IPCC, 2021)"
+}]

@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "690963960217091b94a45e9e"
+  },
+  "Combustiveis": "Gás natural seco",
+  "Massa especifica": 0.00074,
+  "PCI kcal": 8800,
+  "PCI MJ": 36.84
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45e9f"
+  },
+  "Combustiveis": "GLP",
+  "Massa especifica": 0.552,
+  "PCI kcal": 11100,
+  "PCI MJ": 46.47
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45ea2"
+  },
+  "Combustiveis": "Resíduo de Eucaliptus",
+  "PCI kcal": 63.29113924,
+  "PCI MJ": 15.8
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45e9a"
+  },
+  "Combustiveis": "Etanol hidratado",
+  "Massa especifica": 0.809,
+  "PCI kcal": 6300,
+  "PCI MJ": 26.38
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45e9d"
+  },
+  "Combustiveis": "Diesel A",
+  "Massa especifica": 0.84,
+  "PCI kcal": 10100,
+  "PCI MJ": 42.29
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45e9c"
+  },
+  "Combustiveis": "Gasolina A",
+  "Massa especifica": 0.742,
+  "PCI kcal": 10400,
+  "PCI MJ": 43.54
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45ea0"
+  },
+  "Combustiveis": "Óleo combustível",
+  "Massa especifica": 1.013,
+  "PCI kcal": 9590,
+  "PCI MJ": 40.15
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45ea3"
+  },
+  "Combustiveis": "Coque de Petróleo",
+  "PCI kcal": 8390,
+  "PCI MJ": 35.12
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45e99"
+  },
+  "Combustiveis": "Etanol anidro",
+  "Massa especifica": 0.791,
+  "PCI kcal": 6750,
+  "PCI MJ": 28.26
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45e9b"
+  },
+  "Combustiveis": "GLP renovável",
+  "Massa especifica": 0.55,
+  "PCI kcal": 11130,
+  "PCI MJ": 46.6
+},
+{
+  "_id": {
+    "$oid": "690963960217091b94a45ea1"
+  },
+  "Combustiveis": "Resíduo de Pinus",
+  "PCI kcal": 53.19148936,
+  "PCI MJ": 18.8
+}]
