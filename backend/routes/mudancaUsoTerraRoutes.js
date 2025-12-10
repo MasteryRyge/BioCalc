@@ -8,7 +8,7 @@ router.get('/mudancaUsoTerra/:estado', async (req, res) => {
 
         if (req.params.estado === 'todos') {
 
-            const estados = await MudancaUsoTerra.find({ "Estado ": { $ne: "Brasil" }}, { "Estado ": 1, _id: 0 });
+            const estados = await MudancaUsoTerra.find({ "Estado ": { $ne: "Brasil" }}, { "Estado ": 1, _id: 0 }).sort({ "Estado ": 1 });
             res.json(estados);
 
         } else {

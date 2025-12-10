@@ -2,7 +2,6 @@ import {useState, useEffect} from "react";
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Teste from "./components/testeProps";
 import Cadastro from "./components/Cadastro";
 import Calculadora from "./components/Calculadora";
 import FaseAgricola from "./components/FaseAgricola";

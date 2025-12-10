@@ -5,7 +5,7 @@
   "Fontes de Biomassa": "Casca de Amendoin",
   "g/MJ": 58.47953216,
   "MJ/kg": 17.1,
-  "Combustao estacionaria (queima em caldeira)": 0.000373497,
+  "Combustao estacionaria (queima em caldeira)": 0.000373497076,
   "Biocombustivel solido": "Pellet/Briquette de Casca de Amendoin",
   "MJ/kg Biocombustivel": 17.1
 },
@@ -16,7 +16,7 @@
   "Fontes de Biomassa": "Resíduo de Eucaliptus",
   "g/MJ": 63.29113924,
   "MJ/kg": 15.8,
-  "Combustao estacionaria (queima em caldeira)": 0.000369179,
+  "Combustao estacionaria (queima em caldeira)": 0.0003691791908,
   "Biocombustivel solido": "Pellet/Briquette Eucaliptus",
   "MJ/kg Biocombustivel": 15.8
 },
@@ -27,7 +27,7 @@
   "Fontes de Biomassa": "Carvão vegetal de eucalipto",
   "g/MJ": 63.29113924,
   "MJ/kg": 15.8,
-  "Combustao estacionaria (queima em caldeira)": 0.1191,
+  "Combustao estacionaria (queima em caldeira)": 0.119052,
   "Biocombustivel solido": "Carvão vegetal de Eucalipto",
   "MJ/kg Biocombustivel": 18.5
 },
@@ -38,7 +38,7 @@
   "Fontes de Biomassa": "Pinus Virgem",
   "g/MJ": 53.19148936,
   "MJ/kg": 18.8,
-  "Combustao estacionaria (queima em caldeira)": 0.000369179,
+  "Combustao estacionaria (queima em caldeira)": 0.0003691791908,
   "Biocombustivel solido": "Pellet/Briquette de Pinus Virgem",
   "MJ/kg Biocombustivel": 18.8
 },
@@ -49,7 +49,7 @@
   "Fontes de Biomassa": "Resíduo de Pinus",
   "g/MJ": 53.19148936,
   "MJ/kg": 18.8,
-  "Combustao estacionaria (queima em caldeira)": 0.000369179,
+  "Combustao estacionaria (queima em caldeira)": 0.0003691791908,
   "Biocombustivel solido": "Pellet/Briquette Pinus",
   "MJ/kg Biocombustivel": 18.8
 },
@@ -60,7 +60,7 @@
   "Fontes de Biomassa": "Eucaliptus Virgem",
   "g/MJ": 63.29113924,
   "MJ/kg": 15.8,
-  "Combustao estacionaria (queima em caldeira)": 0.000369179,
+  "Combustao estacionaria (queima em caldeira)": 0.0003691791908,
   "Biocombustivel solido": "Pellet/Briquette de Eucaliptus Virgem",
   "MJ/kg Biocombustivel": 15.8
 }]

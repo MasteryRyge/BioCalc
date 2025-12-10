@@ -9,7 +9,6 @@ const AlocacaoMudancaUsoTerraSchema = new mongoose.Schema({
     alocacaoProduto: Number,
     coProduto: String,
     AlocacaoCoProduto: Number,
-    alocacaoProduto: Number,
     alocacaoConsideradaBiomassa: Number,
     filtro: String
 

@@ -106,7 +106,7 @@ function Resultados({temp}) {
         setIntensidadeCarbonoSoma2(Number(temp[1]) +
             Number(temp[2]) + Number(temp[3]))
 
-        setIntensidadeCarbonoSoma3()
+        setIntensidadeCarbonoSoma3(temp[0] + temp[1] + temp[2] + temp[3] + temp[6])
 
 
         setDataContribuicaoEtapasCicloVida({
@@ -494,24 +494,24 @@ function Resultados({temp}) {
                         </tr>
                         <tr>
                             <th scope="row">Nota de Eficiência Energético-Ambiental</th>
-                            <td>{MediaPonderada - IntensidadeCarbonoSoma2}</td>
-                            <td>{OleoCombustivelPesado - IntensidadeCarbonoSoma2}</td>
-                            <td>{CoquePetroleo - IntensidadeCarbonoSoma2}</td>
+                            <td>{MediaPonderada - IntensidadeCarbonoSoma3}</td>
+                            <td>{OleoCombustivelPesado - IntensidadeCarbonoSoma3}</td>
+                            <td>{CoquePetroleo - IntensidadeCarbonoSoma3}</td>
                         </tr>
                         <tr>
                             <th scope="row">Redução de emissões</th>
-                            <td>{(MediaPonderada ? (MediaPonderada - IntensidadeCarbonoSoma2) / MediaPonderada : 0) * 100 + '%'}</td>
-                            <td>{(OleoCombustivelPesado ? (OleoCombustivelPesado - IntensidadeCarbonoSoma2) / OleoCombustivelPesado : 0) * 100 + '%'}</td>
-                            <td>{(CoquePetroleo ? (CoquePetroleo - IntensidadeCarbonoSoma2) / CoquePetroleo : 0) * 100 + '%'}</td>
+                            <td>{(MediaPonderada ? (MediaPonderada - IntensidadeCarbonoSoma3) / MediaPonderada : 0) * 100 + '%'}</td>
+                            <td>{(OleoCombustivelPesado ? (OleoCombustivelPesado - IntensidadeCarbonoSoma3) / OleoCombustivelPesado : 0) * 100 + '%'}</td>
+                            <td>{(CoquePetroleo ? (CoquePetroleo - IntensidadeCarbonoSoma3) / CoquePetroleo : 0) * 100 + '%'}</td>
 
                         </tr>
                         <tr>
                             <th scope="row">Possíveis créditos elegíveis (CBIOs) <br/>Considerando usina de médio
                                 porte<br/>com produção anual de 10.000 Ton
                             </th>
-                            <td>{CreditosMediaPonderada2}</td>
-                            <td>{CreditosOleoCombustivel2}</td>
-                            <td>{CreditosCoquePetroleo2}</td>
+                            <td>{CreditosMediaPonderada3}</td>
+                            <td>{CreditosOleoCombustivel3}</td>
+                            <td>{CreditosCoquePetroleo3}</td>
                         </tr>
                         </tbody>
                     </table>

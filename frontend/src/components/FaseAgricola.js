@@ -117,7 +117,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
 
         }
 
-    }, [EmissaoBiomassaAlocada, PoderCalorico, ImpactoMilho, ValorDadoEspecifico]);
+    }, [EmissaoBiomassaAlocada, PoderCalorico, ImpactoMilho, ValorDadoEspecifico, DadoEspecifico]);
 
 
     //mudança de uso da terra
