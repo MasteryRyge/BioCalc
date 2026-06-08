@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const AlocacaoMudancaUsoTerra = require('../models/AlocacaoMudancaUsoTerra');
+const AlocacaoMudancaUsoTerra = require('../models/alocacaoMudancaUsoTerra');
 
 // Rota para pegar os tipos de estagios
 router.get('/alocacaoMudancaUsoTerra/:biomassa', async (req, res) => {
