@@ -411,8 +411,8 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>Biocombustível (kg CO₂eq/MJ)</th>
-                            <td scope="col" style={{backgroundColor: '#63afff'}}>{IntensidadeCarbonoSoma}</td>
-                            <td scope="col">% de contribuição</td>
+                            <td style={{backgroundColor: '#63afff'}}>{IntensidadeCarbonoSoma}</td>
+                            <td>% de contribuição</td>
                         </tr>
                         <tr>
                             <th scope="row">Agrícola</th>
@@ -426,13 +426,13 @@ function Resultados({temp}) {
                         </tr>
                         <tr>
                             <th scope="row">Transporte</th>
-                            <td scope="col">{temp[2]}</td>
-                            <td scope="col">{(IntensidadeCarbonoSoma ? (temp[2] / IntensidadeCarbonoSoma) : 0) * 100 + '%'}</td>
+                            <td>{temp[2]}</td>
+                            <td>{(IntensidadeCarbonoSoma ? (temp[2] / IntensidadeCarbonoSoma) : 0) * 100 + '%'}</td>
                         </tr>
                         <tr>
                             <th scope="row">Uso</th>
-                            <td scope="col">{temp[3]}</td>
-                            <td scope="col">{(IntensidadeCarbonoSoma ? (temp[3] / IntensidadeCarbonoSoma) : 0) * 100 + '%'}</td>
+                            <td>{temp[3]}</td>
+                            <td>{(IntensidadeCarbonoSoma ? (temp[3] / IntensidadeCarbonoSoma) : 0) * 100 + '%'}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -453,9 +453,9 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>combustível fóssil (kg CO₂eq/MJ)"</th>
-                            <td scope="col">{MediaPonderada}</td>
-                            <td scope="col">{OleoCombustivelPesado}</td>
-                            <td scope="col">{CoquePetroleo}</td>
+                            <td>{MediaPonderada}</td>
+                            <td>{OleoCombustivelPesado}</td>
+                            <td>{CoquePetroleo}</td>
                         </tr>
                         <tr>
                             <th scope="row">Nota de Eficiência Energético-Ambiental</th>
@@ -505,8 +505,8 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>Biocombustível (kg CO₂eq/MJ)</th>
-                            <td scope="col" style={{backgroundColor: '#63afff'}}>{IntensidadeCarbonoSoma2}</td>
-                            <td scope="col">% de contribuição</td>
+                            <td style={{backgroundColor: '#63afff'}}>{IntensidadeCarbonoSoma2}</td>
+                            <td>% de contribuição</td>
                         </tr>
                         <tr>
                             <th scope="row">Industrial</th>
@@ -515,13 +515,13 @@ function Resultados({temp}) {
                         </tr>
                         <tr>
                             <th scope="row">Transporte</th>
-                            <td scope="col">{temp[2]}</td>
-                            <td scope="col">{(IntensidadeCarbonoSoma2 ? (temp[2] / IntensidadeCarbonoSoma2) : 0) * 100 + '%'}</td>
+                            <td>{temp[2]}</td>
+                            <td>{(IntensidadeCarbonoSoma2 ? (temp[2] / IntensidadeCarbonoSoma2) : 0) * 100 + '%'}</td>
                         </tr>
                         <tr>
                             <th scope="row">Uso</th>
-                            <td scope="col">{temp[3]}</td>
-                            <td scope="col">{(IntensidadeCarbonoSoma2 ? (temp[3] / IntensidadeCarbonoSoma2) : 0) * 100 + '%'}</td>
+                            <td>{temp[3]}</td>
+                            <td>{(IntensidadeCarbonoSoma2 ? (temp[3] / IntensidadeCarbonoSoma2) : 0) * 100 + '%'}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -542,9 +542,9 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>combustível fóssil (kg CO₂eq/MJ)"</th>
-                            <td scope="col">{MediaPonderada}</td>
-                            <td scope="col">{OleoCombustivelPesado}</td>
-                            <td scope="col">{CoquePetroleo}</td>
+                            <td>{MediaPonderada}</td>
+                            <td>{OleoCombustivelPesado}</td>
+                            <td>{CoquePetroleo}</td>
                         </tr>
                         <tr>
                             <th scope="row">Nota de Eficiência Energético-Ambiental<br/>(kg CO₂eq/MJ)</th>
@@ -587,7 +587,7 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>Biocombustível (kg CO₂eq/MJ)</th>
-                            <td scope="col" style={{backgroundColor: '#63afff'}}>{temp[0] + temp[1] + temp[2] + temp[3] + temp[6]}</td>
+                            <td style={{backgroundColor: '#63afff'}}>{temp[0] + temp[1] + temp[2] + temp[3] + temp[6]}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -608,9 +608,9 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>combustível fóssil (kg CO₂eq/MJ)"</th>
-                            <td scope="col">{MediaPonderada}</td>
-                            <td scope="col">{OleoCombustivelPesado}</td>
-                            <td scope="col">{CoquePetroleo}</td>
+                            <td>{MediaPonderada}</td>
+                            <td>{OleoCombustivelPesado}</td>
+                            <td>{CoquePetroleo}</td>
                         </tr>
                         <tr>
                             <th scope="row">Nota de Eficiência Energético-Ambiental</th>
