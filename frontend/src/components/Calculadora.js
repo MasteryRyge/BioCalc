@@ -70,6 +70,23 @@ function Calculadora({dadosIntensidadeCarbono}) {
 
     }
 
+    useEffect(() => {
+        async function buscarCBIO() {
+            try {
+                const response = await fetch("http://localhost:5000/cbio");
+                const data = await response.json();
+
+                setValorMercadoCBIOB3(data[0].med)
+
+            } catch (error) {
+                console.error("Falha ao obter dados do CBIO");
+            }
+        }
+
+        buscarCBIO();
+    }, []);
+
+
     return (
 
         <>
@@ -157,7 +174,7 @@ function Calculadora({dadosIntensidadeCarbono}) {
                             <div className="mb-3">
                                 <label className="form-label">Valor de mercado do CBIO:B3 hoje:
                                     Consultar em: cbio.datagro.com/cbio/</label>
-                                <input type="number" className="form-control col-md-4"
+                                <input type="number" className="form-control col-md-4" value={ValorMercadoCBIOB3}
                                        onChange={mudaValorMercadoCBIOB3}/>
                             </div>
                             <div className="mb-3">

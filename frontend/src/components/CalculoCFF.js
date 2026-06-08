@@ -21,7 +21,6 @@ function CalculoCFF({dadosIntensidadeCarbono, ImpactoTransporteBiomassa, Impacto
             .then(res => res.json())
             .then(data => {
                 setValores(data.dados)
-                console.log(data.dados)
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
         
@@ -39,6 +38,7 @@ function CalculoCFF({dadosIntensidadeCarbono, ImpactoTransporteBiomassa, Impacto
     }, [dadosIntensidadeCarbono, ImpactoTransporteBiomassa, ImpactoTotal]);
 
     useEffect(() => {
+
 
         setTotal(Material + Energy + Disposal + (dadosIntensidadeCarbono[0] + dadosIntensidadeCarbono[1] + dadosIntensidadeCarbono[2] + dadosIntensidadeCarbono[3]))
 

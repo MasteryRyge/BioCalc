@@ -1,5 +1,7 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import { useMemo } from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 import {Pie} from "react-chartjs-2";
 
@@ -12,6 +14,10 @@ import {
 } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
+
+//Salvar pdf
+
+
 
 
 function Resultados({temp}) {
@@ -274,6 +280,118 @@ function Resultados({temp}) {
     }, [CoquePetroleo, IntensidadeCarbonoSoma3]);
 
 
+    //salvar pdf
+
+    const resultadosRef1 = useRef();
+    const resultadosRef2 = useRef();
+    const resultadosRef3 = useRef();
+
+    const grafico1Ref = useRef(null);
+    const grafico2Ref = useRef(null);
+
+
+    const adicionarElementoAoPDF = async (
+        elemento,
+        pdf
+    ) => {
+
+        const canvas = await html2canvas(elemento, {
+            scale: 2,
+            useCORS: true
+        });
+
+        const imgData = canvas.toDataURL("image/png");
+
+        const margem = 10;
+
+        const pageWidth =
+            pdf.internal.pageSize.getWidth();
+
+        const usableWidth =
+            pageWidth - (margem * 2);
+
+        const imgHeight =
+            (canvas.height * usableWidth) /
+            canvas.width;
+
+        pdf.addImage(
+            imgData,
+            "PNG",
+            margem,   // X
+            margem,   // Y
+            usableWidth,
+            imgHeight
+        );
+    };
+
+    const gerarPDF = async () => {
+
+        const pdf = new jsPDF({
+            orientation: "portrait",
+            unit: "mm",
+            format: "a4"
+        });
+
+        // =========================
+        // PÁGINA 1
+        // =========================
+
+        await adicionarElementoAoPDF(
+            resultadosRef1.current,
+            pdf
+        );
+
+        // gráfico 1 em alta qualidade
+        const grafico1 =
+            grafico1Ref.current.toBase64Image();
+
+        pdf.addImage(
+            grafico1,
+            "PNG",
+            55,   // X
+            180,  // Y
+            100,  // largura
+            100   // altura
+        );
+
+        // =========================
+        // PÁGINA 2
+        // =========================
+
+        pdf.addPage();
+
+        await adicionarElementoAoPDF(
+            resultadosRef2.current,
+            pdf
+        );
+
+        // gráfico 2 em alta qualidade
+        const grafico2 =
+            grafico2Ref.current.toBase64Image();
+
+        pdf.addImage(
+            grafico2,
+            "PNG",
+            55,
+            180,
+            100,
+            100
+        );
+
+        // =========================
+        // PÁGINA 3
+        // =========================
+
+        pdf.addPage();
+
+        await adicionarElementoAoPDF(
+            resultadosRef3.current,
+            pdf
+        );
+
+        pdf.save("resultado.pdf");
+    };
+
     return (
 
         <>
@@ -282,7 +400,7 @@ function Resultados({temp}) {
                      style={{backgroundColor: "#9a9a9a", fontSize: "1.2rem", borderRadius: "4px"}}>
                     Resultados
                 </div>
-                <div className="col-md-8 mb-5">
+                <div ref={resultadosRef1} className="col-md-8 mb-5">
                     <table className="table table-bordered mb-5">
                         <thead>
                         <tr>
@@ -363,18 +481,17 @@ function Resultados({temp}) {
                         </tbody>
                     </table>
 
+                </div>
 
-                    <div style={{width: "400px", height: "400px"}}>
-                        <Pie data={dataContribuicaoEtapasCicloVida} options={options}/>
-                    </div>
-
+                <div style={{width: "400px", height: "400px"}}>
+                    <Pie ref={grafico1Ref} data={dataContribuicaoEtapasCicloVida} options={options}/>
                 </div>
 
                 <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-4"
                      style={{backgroundColor: "#9a9a9a", fontSize: "1.2rem", borderRadius: "4px"}}>
                 </div>
 
-                <div className="col-md-8">
+                <div ref={resultadosRef2} className="col-md-8">
 
                     <h4 className="mb-3">Considerando carga nula na fase agricola, quando resíduo</h4>
 
@@ -452,14 +569,17 @@ function Resultados({temp}) {
                         </tr>
                         </tbody>
                     </table>
-                    <div style={{width: "400px", height: "400px"}}>
-                        <Pie data={dataContribuicaoEtapasCicloVida2} options={options}/>
-                    </div>
+
                 </div>
+
+                <div style={{width: "400px", height: "400px"}}>
+                    <Pie ref={grafico2Ref} data={dataContribuicaoEtapasCicloVida2} options={options}/>
+                </div>
+
                 <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-4"
                      style={{backgroundColor: "#9a9a9a", fontSize: "1.2rem", borderRadius: "4px"}}>
                 </div>
-                <div className="col-md-8">
+                <div ref={resultadosRef3} className="col-md-8">
 
                     <h4 className="mb-3">Considerando a aplicação da Circular Footprint Formula (CFF)</h4>
 
@@ -515,6 +635,12 @@ function Resultados({temp}) {
                         </tr>
                         </tbody>
                     </table>
+
+                </div>
+                <div className="container mb-5 d-flex flex-column justify-content-center align-items-center">
+                    <button className="btn btn-danger btn-lg" onClick={gerarPDF}>
+                        Salvar resultados em PDF
+                    </button>
                 </div>
             </div>
 

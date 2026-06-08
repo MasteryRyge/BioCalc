@@ -44,8 +44,9 @@ function App() {
 
     }
 
-    function recebeAgricola (dado) {
 
+
+    function recebeAgricola (dado) {
 
         setItensidadeCarbonoAgricola(dado)
         
@@ -82,34 +83,90 @@ function App() {
     useEffect(() => {
         
         setTabela1([ItensidadeCarbonoAgricola, ItensidadeCarbonoIndustrial, ItensidadeCarbonoDistribuicao, CombustaoEstacionariaInsumo, MJKgInsumo, MJKgInsumoBio, TotalCFF])
-        
+
     }, [ItensidadeCarbonoAgricola, ItensidadeCarbonoIndustrial, ItensidadeCarbonoDistribuicao, CombustaoEstacionariaInsumo, MJKgInsumo, MJKgInsumoBio, TotalCFF]);
 
 
+    const [mostrarResultados, setMostrarResultados] = useState(false);
 
-  return (
-    <div className="App">
-      <header className="App-header">
+    const abrirResultados = () => {
+        setMostrarResultados(true);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
 
-          <CalculoCFF dadosIntensidadeCarbono={Tabela1} ImpactoTransporteBiomassa = {ImpactoTransporteBiomassa} ImpactoTotal = {ImpactoTotal} funcaoTotalCFF={recebeTotalCFF}/>
+    const voltarPagina = () => {
+        setMostrarResultados(false);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
 
-          <Calculadora dadosIntensidadeCarbono={Tabela1} combustaoEstacionariaInsumoEscolhido={CombustaoEstacionariaInsumo}/>
 
-          <FaseAgricola funcaoInsumo={recebeInsumo} funcaoResultadoAgricola={recebeAgricola} funcaoDadosCFF={recebeDadosCFF}/>
+    return (
+        <div className="App">
+            <header className="App-header">
 
-          <FaseIndustrial poderCalorificoInsumo = {InsumoEscolhido['g/MJ']/1000}
-                          emissaoBiomassaAlocadaInsumo = {EmissaoBiomassaAlocadaInsumo}
-                          funcaoResultadoIndustrial = {recebeIndustrial}/>
+                <div style={{ display: mostrarResultados ? "none" : "block" }}>
+                    <CalculoCFF
+                        dadosIntensidadeCarbono={Tabela1}
+                        ImpactoTransporteBiomassa={ImpactoTransporteBiomassa}
+                        ImpactoTotal={ImpactoTotal}
+                        funcaoTotalCFF={recebeTotalCFF}
+                    />
 
-          <FaseDistribuicao poderCalorificoInsumo = {InsumoEscolhido['g/MJ']/1000} funcaoResultadoDistribuicao = {recebeDistribuicao}/>
+                    <Cadastro/>
 
-          <div className="md-5"/>
 
-          <Resultados temp={Tabela1}/>
+                    <FaseAgricola
+                        funcaoInsumo={recebeInsumo}
+                        funcaoResultadoAgricola={recebeAgricola}
+                        funcaoDadosCFF={recebeDadosCFF}
+                    />
 
-      </header>
-    </div>
-  );
+                    <FaseIndustrial
+                        poderCalorificoInsumo={InsumoEscolhido["g/MJ"] / 1000}
+                        emissaoBiomassaAlocadaInsumo={EmissaoBiomassaAlocadaInsumo}
+                        funcaoResultadoIndustrial={recebeIndustrial}
+                    />
+
+                    <FaseDistribuicao
+                        poderCalorificoInsumo={InsumoEscolhido["g/MJ"] / 1000}
+                        funcaoResultadoDistribuicao={recebeDistribuicao}
+                    />
+
+                    <Calculadora
+                        dadosIntensidadeCarbono={Tabela1}
+                        combustaoEstacionariaInsumoEscolhido={CombustaoEstacionariaInsumo}
+                    />
+
+                    <div className="container mb-5 d-flex flex-column justify-content-center align-items-center">
+                            <button className="btn btn-success btn-lg" onClick={abrirResultados}>
+                                Ver Resultados
+                            </button>
+                    </div>
+
+                </div>
+
+                <div style={{ display: mostrarResultados ? "block" : "none" }}>
+                    <button className="btn btn-secondary btn-lg" onClick={voltarPagina} style={{
+                        position: "fixed",
+                        top: "20px",
+                        left: "20px",
+                        zIndex: 1000
+                    }}>
+                        Voltar
+                    </button>
+
+                    <Resultados temp={Tabela1} />
+                </div>
+
+            </header>
+        </div>
+    );
 }
 
 export default App;
