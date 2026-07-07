@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
+import { formatarNumero, formatarPorcentagem } from "../utils/formatadores";
 
-function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
+function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, casasDecimais}) {
 
     //produção de biomassas
 
@@ -345,7 +346,8 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <label>Fator de impacto da biomassa selecionada (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={EmissaoBiomassaAlocada}
+                                <input className="form-control mb-3" type="text"
+                                       value={formatarNumero(EmissaoBiomassaAlocada, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -357,7 +359,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <label>Poder calorífico da biomassa selecionada (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={PoderCalorico} readOnly/>
+                                <input className="form-control mb-3" type="text" value={formatarNumero(PoderCalorico, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>kg / MJ de biocombustível</span>
@@ -379,7 +381,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <label>Impacto associado ao consumo de amido de milho (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoMilho} readOnly/>
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoMilho, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>kg CO2 eq / MJ</span>
@@ -390,7 +392,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <label>Impacto da produção de biomassa</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoTotal} readOnly/>
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoTotal, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>kg CO2 eq. / MJ de biocombustível</span>
@@ -455,7 +457,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <label>Fator de impacto do MUT (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={FatorImpactoMut} readOnly/>
+                                <input className="form-control mb-3" type="text" value={formatarNumero(FatorImpactoMut, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>kg CO2 eq./ kg biomassa</span>
@@ -466,7 +468,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <label>Percentual de alocação da biomassa (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={PercentualAlocacaoBiomassa}
+                                <input className="form-control mb-3" type="text" value={formatarNumero(PercentualAlocacaoBiomassa, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -478,7 +480,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <label>Impacto MUT</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={ImpactoMUT} readOnly/>
+                                <input className="form-control mb-3" type="text" value={formatarNumero(ImpactoMUT, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>kg CO2 eq. / MJ de biocombustivel</span>
@@ -526,7 +528,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
                                 <input className="form-control mb-3" type="text"
-                                       value={QuantidadeMediaBiomassaTransportada}
+                                       value={formatarNumero(QuantidadeMediaBiomassaTransportada, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -539,7 +541,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
                                 <input className="form-control mb-3" type="text"
-                                       value={QuantidadeMediaBiomassaTransportada * DistanciaTransporte} readOnly/>
+                                       value={formatarNumero(QuantidadeMediaBiomassaTransportada * DistanciaTransporte, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>t.km</span>
@@ -550,7 +552,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF}) {
                         <label>Impacto do transporte da biomassa</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={ImpactoTransporteBiomassa}
+                                <input className="form-control mb-3" type="text" value={formatarNumero(ImpactoTransporteBiomassa, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">

@@ -5,6 +5,8 @@ import jsPDF from "jspdf";
 
 import {Pie} from "react-chartjs-2";
 
+import { formatarNumero, formatarPorcentagem } from "../utils/formatadores";
+
 import {
     Chart as ChartJS,
     ArcElement,
@@ -20,7 +22,8 @@ ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 
 
-function Resultados({temp}) {
+function Resultados({temp, casasDecimais, dadosCadastro}) {
+
 
 
 
@@ -289,6 +292,8 @@ function Resultados({temp}) {
     const grafico1Ref = useRef(null);
     const grafico2Ref = useRef(null);
 
+    const dadosPdfRef = useRef();
+
 
     const adicionarElementoAoPDF = async (
         elemento,
@@ -331,6 +336,14 @@ function Resultados({temp}) {
             unit: "mm",
             format: "a4"
         });
+
+        await adicionarElementoAoPDF(
+            dadosPdfRef.current,
+            pdf
+        );
+        
+        pdf.addPage();
+
 
         // =========================
         // PÁGINA 1
@@ -395,6 +408,50 @@ function Resultados({temp}) {
     return (
 
         <>
+            <div
+    ref={dadosPdfRef}
+    style={{
+        position: "absolute",
+        left: "-9999px",
+        width: "700px"
+    }}
+>
+
+    <h3>Dados do usuário</h3>
+
+    <table className="table table-bordered">
+        <tbody>
+
+            <tr>
+                <th>Empresa:</th>
+                <td>{dadosCadastro.empresa}</td>
+            </tr>
+
+            <tr>
+                <th>Estado:</th>
+                <td>{dadosCadastro.estado}</td>
+            </tr>
+
+            <tr>
+                <th>Cidade:</th>
+                <td>{dadosCadastro.cidade}</td>
+            </tr>
+
+            <tr>
+                <th>Responsável:</th>
+                <td>{dadosCadastro.responsavel}</td>
+            </tr>
+
+            <tr>
+                <th>E-mail:</th>
+                <td>{dadosCadastro.email}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
             <div className="container mt-4 d-flex flex-column justify-content-center align-items-center">
                 <div className="py-2 px-3 w-100 text-center text-white fw-bold mb-2"
                      style={{backgroundColor: "#9a9a9a", fontSize: "1.2rem", borderRadius: "4px"}}>
@@ -411,28 +468,28 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>Biocombustível (kg CO₂eq/MJ)</th>
-                            <td style={{backgroundColor: '#63afff'}}>{IntensidadeCarbonoSoma}</td>
+                            <td style={{backgroundColor: '#63afff'}}>{formatarNumero(IntensidadeCarbonoSoma, casasDecimais)}</td>
                             <td>% de contribuição</td>
                         </tr>
                         <tr>
                             <th scope="row">Agrícola</th>
-                            <td>{temp[0]}</td>
-                            <td>{(IntensidadeCarbonoSoma ? (temp[0] / IntensidadeCarbonoSoma) : 0) * 100 + '%'}</td>
+                            <td>{formatarNumero(temp[0], casasDecimais)}</td>
+                            <td>{formatarPorcentagem((IntensidadeCarbonoSoma ? (temp[0] / IntensidadeCarbonoSoma) : 0) * 100, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Industrial</th>
-                            <td>{temp[1]}</td>
-                            <td>{(IntensidadeCarbonoSoma ? (temp[1] / IntensidadeCarbonoSoma) : 0) * 100 + '%'}</td>
+                            <td>{formatarNumero(temp[1])}</td>
+                            <td>{formatarPorcentagem((IntensidadeCarbonoSoma ? (temp[1] / IntensidadeCarbonoSoma) : 0) * 100, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Transporte</th>
-                            <td>{temp[2]}</td>
-                            <td>{(IntensidadeCarbonoSoma ? (temp[2] / IntensidadeCarbonoSoma) : 0) * 100 + '%'}</td>
+                            <td>{formatarNumero(temp[2])}</td>
+                            <td>{formatarPorcentagem((IntensidadeCarbonoSoma ? (temp[2] / IntensidadeCarbonoSoma) : 0) * 100, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Uso</th>
-                            <td>{temp[3]}</td>
-                            <td>{(IntensidadeCarbonoSoma ? (temp[3] / IntensidadeCarbonoSoma) : 0) * 100 + '%'}</td>
+                            <td>{formatarNumero(temp[3])}</td>
+                            <td>{formatarPorcentagem((IntensidadeCarbonoSoma ? (temp[3] / IntensidadeCarbonoSoma) : 0) * 100, casasDecimais)}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -453,30 +510,30 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>combustível fóssil (kg CO₂eq/MJ)"</th>
-                            <td>{MediaPonderada}</td>
-                            <td>{OleoCombustivelPesado}</td>
-                            <td>{CoquePetroleo}</td>
+                            <td>{formatarNumero(MediaPonderada, casasDecimais)}</td>
+                            <td>{formatarNumero(OleoCombustivelPesado, casasDecimais)}</td>
+                            <td>{formatarNumero(CoquePetroleo, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Nota de Eficiência Energético-Ambiental</th>
-                            <td>{MediaPonderada - IntensidadeCarbonoSoma}</td>
-                            <td>{OleoCombustivelPesado - IntensidadeCarbonoSoma}</td>
-                            <td>{CoquePetroleo - IntensidadeCarbonoSoma}</td>
+                            <td>{formatarNumero(MediaPonderada - IntensidadeCarbonoSoma, casasDecimais)}</td>
+                            <td>{formatarNumero(OleoCombustivelPesado - IntensidadeCarbonoSoma, casasDecimais)}</td>
+                            <td>{formatarNumero(CoquePetroleo - IntensidadeCarbonoSoma, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Redução de emissões</th>
-                            <td>{(MediaPonderada ? (MediaPonderada - IntensidadeCarbonoSoma) / MediaPonderada : 0) * 100 + '%'}</td>
-                            <td>{(OleoCombustivelPesado ? (OleoCombustivelPesado - IntensidadeCarbonoSoma) / OleoCombustivelPesado : 0) * 100 + '%'}</td>
-                            <td>{(CoquePetroleo ? (CoquePetroleo - IntensidadeCarbonoSoma) / CoquePetroleo : 0) * 100 + '%'}</td>
+                            <td>{formatarPorcentagem((MediaPonderada ? (MediaPonderada - IntensidadeCarbonoSoma) / MediaPonderada : 0) * 100, casasDecimais)}</td>
+                            <td>{formatarPorcentagem((OleoCombustivelPesado ? (OleoCombustivelPesado - IntensidadeCarbonoSoma) / OleoCombustivelPesado : 0) * 100, casasDecimais)}</td>
+                            <td>{formatarPorcentagem((CoquePetroleo ? (CoquePetroleo - IntensidadeCarbonoSoma) / CoquePetroleo : 0) * 100, casasDecimais)}</td>
 
                         </tr>
                         <tr>
                             <th scope="row">Possíveis créditos elegíveis (CBIOs) <br/>Considerando usina de médio
                                 porte<br/>com produção anual de 10.000 Ton
                             </th>
-                            <td>{CreditosMediaPonderada}</td>
-                            <td>{CreditosOleoCombustivel}</td>
-                            <td>{CreditosCoquePetroleo}</td>
+                            <td>{formatarNumero(CreditosMediaPonderada, casasDecimais)}</td>
+                            <td>{formatarNumero(CreditosOleoCombustivel, casasDecimais)}</td>
+                            <td>{formatarNumero(CreditosCoquePetroleo, casasDecimais)}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -505,23 +562,23 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>Biocombustível (kg CO₂eq/MJ)</th>
-                            <td style={{backgroundColor: '#63afff'}}>{IntensidadeCarbonoSoma2}</td>
+                            <td style={{backgroundColor: '#63afff'}}>{formatarPorcentagem(IntensidadeCarbonoSoma2, casasDecimais)}</td>
                             <td>% de contribuição</td>
                         </tr>
                         <tr>
                             <th scope="row">Industrial</th>
-                            <td>{temp[1]}</td>
-                            <td>{(IntensidadeCarbonoSoma2 ? (temp[1] / IntensidadeCarbonoSoma2) : 0) * 100 + '%'}</td>
+                            <td>{formatarNumero(temp[1])}</td>
+                            <td>{formatarPorcentagem((IntensidadeCarbonoSoma2 ? (temp[1] / IntensidadeCarbonoSoma2) : 0) * 100, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Transporte</th>
-                            <td>{temp[2]}</td>
-                            <td>{(IntensidadeCarbonoSoma2 ? (temp[2] / IntensidadeCarbonoSoma2) : 0) * 100 + '%'}</td>
+                            <td>{formatarNumero(temp[2])}</td>
+                            <td>{formatarPorcentagem((IntensidadeCarbonoSoma2 ? (temp[2] / IntensidadeCarbonoSoma2) : 0) * 100, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Uso</th>
-                            <td>{temp[3]}</td>
-                            <td>{(IntensidadeCarbonoSoma2 ? (temp[3] / IntensidadeCarbonoSoma2) : 0) * 100 + '%'}</td>
+                            <td>{formatarNumero(temp[3])}</td>
+                            <td>{formatarPorcentagem((IntensidadeCarbonoSoma2 ? (temp[3] / IntensidadeCarbonoSoma2) : 0) * 100, casasDecimais)}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -542,30 +599,30 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>combustível fóssil (kg CO₂eq/MJ)"</th>
-                            <td>{MediaPonderada}</td>
-                            <td>{OleoCombustivelPesado}</td>
-                            <td>{CoquePetroleo}</td>
+                            <td>{formatarNumero(MediaPonderada, casasDecimais)}</td>
+                            <td>{formatarNumero(OleoCombustivelPesado, casasDecimais)}</td>
+                            <td>{formatarNumero(CoquePetroleo, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Nota de Eficiência Energético-Ambiental<br/>(kg CO₂eq/MJ)</th>
-                            <td>{MediaPonderada - IntensidadeCarbonoSoma2}</td>
-                            <td>{OleoCombustivelPesado - IntensidadeCarbonoSoma2}</td>
-                            <td>{CoquePetroleo - IntensidadeCarbonoSoma2}</td>
+                            <td>{formatarNumero(MediaPonderada - IntensidadeCarbonoSoma2, casasDecimais)}</td>
+                            <td>{formatarNumero(OleoCombustivelPesado - IntensidadeCarbonoSoma2, casasDecimais)}</td>
+                            <td>{formatarNumero(CoquePetroleo - IntensidadeCarbonoSoma2, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Redução de emissões</th>
-                            <td>{(MediaPonderada ? (MediaPonderada - IntensidadeCarbonoSoma2) / MediaPonderada : 0) * 100 + '%'}</td>
-                            <td>{(OleoCombustivelPesado ? (OleoCombustivelPesado - IntensidadeCarbonoSoma2) / OleoCombustivelPesado : 0) * 100 + '%'}</td>
-                            <td>{(CoquePetroleo ? (CoquePetroleo - IntensidadeCarbonoSoma2) / CoquePetroleo : 0) * 100 + '%'}</td>
+                            <td>{formatarPorcentagem((MediaPonderada ? (MediaPonderada - IntensidadeCarbonoSoma2) / MediaPonderada : 0) * 100, casasDecimais)}</td>
+                            <td>{formatarPorcentagem((OleoCombustivelPesado ? (OleoCombustivelPesado - IntensidadeCarbonoSoma2) / OleoCombustivelPesado : 0) * 100, casasDecimais)}</td>
+                            <td>{formatarPorcentagem((CoquePetroleo ? (CoquePetroleo - IntensidadeCarbonoSoma2) / CoquePetroleo : 0) * 100, casasDecimais)}</td>
 
                         </tr>
                         <tr>
                             <th scope="row">Possíveis créditos elegíveis (CBIOs) <br/>Considerando usina de médio
                                 porte<br/>com produção anual de 10.000 Ton
                             </th>
-                            <td>{CreditosMediaPonderada2}</td>
-                            <td>{CreditosOleoCombustivel2}</td>
-                            <td>{CreditosCoquePetroleo2}</td>
+                            <td>{formatarNumero(CreditosMediaPonderada2, casasDecimais)}</td>
+                            <td>{formatarNumero(CreditosOleoCombustivel2, casasDecimais)}</td>
+                            <td>{formatarNumero(CreditosCoquePetroleo2, casasDecimais)}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -587,7 +644,7 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>Biocombustível (kg CO₂eq/MJ)</th>
-                            <td style={{backgroundColor: '#63afff'}}>{temp[0] + temp[1] + temp[2] + temp[3] + temp[6]}</td>
+                            <td style={{backgroundColor: '#63afff'}}>{formatarNumero(temp[0] + temp[1] + temp[2] + temp[3] + temp[6], casasDecimais)}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -608,30 +665,30 @@ function Resultados({temp}) {
                         <tbody>
                         <tr>
                             <th scope="col">Intensidade de Carbono do<br/>combustível fóssil (kg CO₂eq/MJ)"</th>
-                            <td>{MediaPonderada}</td>
-                            <td>{OleoCombustivelPesado}</td>
-                            <td>{CoquePetroleo}</td>
+                            <td>{formatarNumero(MediaPonderada, casasDecimais)}</td>
+                            <td>{formatarNumero(OleoCombustivelPesado, casasDecimais)}</td>
+                            <td>{formatarNumero(CoquePetroleo, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Nota de Eficiência Energético-Ambiental</th>
-                            <td>{MediaPonderada - IntensidadeCarbonoSoma3}</td>
-                            <td>{OleoCombustivelPesado - IntensidadeCarbonoSoma3}</td>
-                            <td>{CoquePetroleo - IntensidadeCarbonoSoma3}</td>
+                            <td>{formatarNumero(MediaPonderada - IntensidadeCarbonoSoma3, casasDecimais)}</td>
+                            <td>{formatarNumero(OleoCombustivelPesado - IntensidadeCarbonoSoma3, casasDecimais)}</td>
+                            <td>{formatarNumero(CoquePetroleo - IntensidadeCarbonoSoma3, casasDecimais)}</td>
                         </tr>
                         <tr>
                             <th scope="row">Redução de emissões</th>
-                            <td>{(MediaPonderada ? (MediaPonderada - IntensidadeCarbonoSoma3) / MediaPonderada : 0) * 100 + '%'}</td>
-                            <td>{(OleoCombustivelPesado ? (OleoCombustivelPesado - IntensidadeCarbonoSoma3) / OleoCombustivelPesado : 0) * 100 + '%'}</td>
-                            <td>{(CoquePetroleo ? (CoquePetroleo - IntensidadeCarbonoSoma3) / CoquePetroleo : 0) * 100 + '%'}</td>
+                            <td>{formatarPorcentagem((MediaPonderada ? (MediaPonderada - IntensidadeCarbonoSoma3) / MediaPonderada : 0) * 100, casasDecimais)}</td>
+                            <td>{formatarPorcentagem((OleoCombustivelPesado ? (OleoCombustivelPesado - IntensidadeCarbonoSoma3) / OleoCombustivelPesado : 0) * 100, casasDecimais)}</td>
+                            <td>{formatarPorcentagem((CoquePetroleo ? (CoquePetroleo - IntensidadeCarbonoSoma3) / CoquePetroleo : 0) * 100, casasDecimais)}</td>
 
                         </tr>
                         <tr>
                             <th scope="row">Possíveis créditos elegíveis (CBIOs) <br/>Considerando usina de médio
                                 porte<br/>com produção anual de 10.000 Ton
                             </th>
-                            <td>{CreditosMediaPonderada3}</td>
-                            <td>{CreditosOleoCombustivel3}</td>
-                            <td>{CreditosCoquePetroleo3}</td>
+                            <td>{formatarNumero(CreditosMediaPonderada3, casasDecimais)}</td>
+                            <td>{formatarNumero(CreditosOleoCombustivel3, casasDecimais)}</td>
+                            <td>{formatarNumero(CreditosCoquePetroleo3, casasDecimais)}</td>
                         </tr>
                         </tbody>
                     </table>

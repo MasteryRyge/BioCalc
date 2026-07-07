@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
-
-function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, funcaoResultadoIndustrial}) {
+import { formatarNumero, formatarPorcentagem } from "../utils/formatadores";
+function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, funcaoResultadoIndustrial, casasDecimais}) {
 
 
     const [CogeracaoEnergia, setCogeracaoEnergia] = useState('')
@@ -582,7 +582,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Impacto do consumo de eletricidade (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoConsumoEletricidade}
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoConsumoEletricidade, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -594,7 +594,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Impacto do consumo de eletricidade</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoConsumoEletricidadeFinal}
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoConsumoEletricidadeFinal, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -701,7 +701,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Impacto da produção de combustível (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoProducaoCombustivel}
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoProducaoCombustivel, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -713,7 +713,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Impacto da combustão estacionária (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoCombustaoEstacionaria}
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoCombustaoEstacionaria, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -725,7 +725,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Impacto do consumo de combustível (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoConsumoCombustivel}
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoConsumoCombustivel, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -744,7 +744,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Fator de emissão da combustão da biomassa (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={emissaoBiomassaAlocadaInsumo}
+                                <input className="form-control" type="number" value={formatarNumero(emissaoBiomassaAlocadaInsumo, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -756,7 +756,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Impacto da combustão da biomassa (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoCombustaoBiomassa}
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoCombustaoBiomassa, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -768,7 +768,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Impacto da combustão da biomassa (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoCombustaoBiomassaFinal}
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoCombustaoBiomassaFinal, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -819,7 +819,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Impacto da fase industrial</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoFaseIndustrial} readOnly/>
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoFaseIndustrial, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>kg CO2 eq./ano</span>
@@ -830,7 +830,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
                         <label>Impacto da fase industrial</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control" type="number" value={ImpactoFaseIndustrialFinal}
+                                <input className="form-control" type="number" value={formatarNumero(ImpactoFaseIndustrialFinal, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">

@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
-
-function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) {
+import { formatarNumero, formatarPorcentagem } from "../utils/formatadores";
+function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao, casasDecimais}) {
 
 
     const [QuantidadeBiomassaTransportada, setQuantidadeBiomassaTransportada] = useState(0)
@@ -343,12 +343,12 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
 
                         </div>
 
-                        <label>Rodoviário -Refere-se ao percentual da distância mensal do biocombustível comercializado
+                        <label>Rodoviário - Refere-se ao percentual da distância mensal do biocombustível comercializado
                             que é distribuido exclusivamente<br/> por via rodoviária</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
                                 <input className="form-control mb-3" type="text"
-                                       value={(1 - (Ferroviario + Hidroviario)) * 100}
+                                       value={formatarPorcentagem((1 - (Ferroviario + Hidroviario)) * 100, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -379,7 +379,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
                         <label>Impacto da fase de distribuição no mercado doméstico (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={ImpactoFaseDistribuicao}
+                                <input className="form-control mb-3" type="text" value={formatarNumero(ImpactoFaseDistribuicao, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -391,7 +391,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
                         <label>MJ transportado anualmente (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={MJTransportadoAnual} readOnly/>
+                                <input className="form-control mb-3" type="text" value={formatarNumero(MJTransportadoAnual, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>MJ/ano</span>
@@ -403,7 +403,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
                         <label>Impacto da distribuição no mercado doméstico (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={ImpactoDistribuicaoMercado}
+                                <input className="form-control mb-3" type="text" value={formatarNumero(ImpactoDistribuicaoMercado, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -474,7 +474,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
                                 <input className="form-control mb-3" type="text"
-                                       value={(1 - (FerroviarioPorto + HidroviarioPorto)) * 100} readOnly/>
+                                       value={formatarPorcentagem((1 - (FerroviarioPorto + HidroviarioPorto)) * 100, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>%</span>
@@ -520,7 +520,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
                         <label>Impacto da fase de distribuição no mercado externo (trecho fabrica-porto)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={ImpactoFaseDistribuicaoExterno}
+                                <input className="form-control mb-3" type="text" value={formatarNumero(ImpactoFaseDistribuicaoExterno, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -534,7 +534,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
                                 <input className="form-control mb-3" type="text"
-                                       value={ImpactoFaseDistribuicaoExternoPorto}
+                                       value={formatarNumero(ImpactoFaseDistribuicaoExternoPorto, casasDecimais)}
                                        readOnly/>
                             </div>
                             <div className="col-md-3">
@@ -546,7 +546,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
                         <label>MJ exportado por ano (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={MJExportadoAnual} readOnly/>
+                                <input className="form-control mb-3" type="text" value={formatarNumero(MJExportadoAnual, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>MJ/ano</span>
@@ -557,7 +557,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao}) 
                         <label>Impacto da exportação (preenchimento automático)</label>
                         <div className="row align-items-center mb-3">
                             <div className="col-md-9">
-                                <input className="form-control mb-3" type="text" value={ImpactoExportacao} readOnly/>
+                                <input className="form-control mb-3" type="text" value={formatarNumero(ImpactoExportacao, casasDecimais)} readOnly/>
                             </div>
                             <div className="col-md-3">
                                 <span>kg CO2 eq. / MJ transportado</span>

@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
+import { formatarNumero, formatarPorcentagem } from "../utils/formatadores";
 
-
-function Calculadora({dadosIntensidadeCarbono}) {
+function Calculadora({dadosIntensidadeCarbono, casasDecimais}) {
 
     const [IntensidadeCarbonoResultado, setIntensidadeCarbonoResultado] = useState(0)
     const [NotaEficienciaEnergetica, setNotaEficienciaEnergetica] = useState(0)
@@ -10,7 +10,9 @@ function Calculadora({dadosIntensidadeCarbono}) {
     const [CreditosElegiveis, setCreditosElegiveis] = useState(0)
     const [ReducaoEmissoes, setReducaoEmissoes] = useState(0)
     const [ValorMercadoCBIOB3, setValorMercadoCBIOB3] = useState(0)
-    
+
+
+
     useEffect(() => {
 
         let ne = Number(dadosIntensidadeCarbono[0]) + Number(dadosIntensidadeCarbono[1]) +
@@ -29,7 +31,12 @@ function Calculadora({dadosIntensidadeCarbono}) {
 
     function mudaFossilSubstituto(e) {
 
-        setFossilSubstituto(e.target.value)
+        fetch(`http://localhost:5000/combustivelFossilSubstituto/${encodeURIComponent(e.target.value)}`)
+            .then(res => res.json())
+            .then(data => {
+                setFossilSubstituto(data.dados[0]["Intensidade total de carbono do combustivel fossil substituto (Kg)"]);
+            })
+            .catch(err => console.error('Erro ao buscar dados:', err));
 
     }
 
@@ -71,6 +78,13 @@ function Calculadora({dadosIntensidadeCarbono}) {
     }
 
     useEffect(() => {
+
+        mudaFossilSubstituto({
+            target: {
+                value: "Média ponderada: Diesel A, Gasolina A e GNV"
+            }
+        });
+
         async function buscarCBIO() {
             try {
                 const response = await fetch("http://localhost:5000/cbio");
@@ -103,35 +117,35 @@ function Calculadora({dadosIntensidadeCarbono}) {
                             <div className="mb-3">
                                 <label className="form-label">Intensidade de Carbono (kg CO₂eq/MJ):</label>
                                 <input type="number" className="form-control col-md-4"
-                                       value={IntensidadeCarbonoResultado} readOnly/>
+                                       value={formatarNumero(IntensidadeCarbonoResultado, casasDecimais)} readOnly/>
                             </div>
 
                             <div className="mb-3">
                                 <label className="form-label">Agrícola:</label>
                                 <input type="number" className="form-control col-md-4"
-                                       value={dadosIntensidadeCarbono[0]} readOnly/>
+                                       value={formatarNumero(dadosIntensidadeCarbono[0], casasDecimais)} readOnly/>
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">Industrial:</label>
                                 <input type="number" className="form-control col-md-4"
-                                       value={dadosIntensidadeCarbono[1]} readOnly/>
+                                       value={formatarNumero(dadosIntensidadeCarbono[1], casasDecimais)} readOnly/>
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">Transporte:</label>
                                 <input type="number" className="form-control col-md-4"
-                                       value={dadosIntensidadeCarbono[2]} readOnly/>
+                                       value={formatarNumero(dadosIntensidadeCarbono[2], casasDecimais)} readOnly/>
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">Uso:</label>
                                 <input type="number" className="form-control col-md-4"
-                                       value={dadosIntensidadeCarbono[3]} readOnly/>
+                                       value={formatarNumero(dadosIntensidadeCarbono[3], casasDecimais)} readOnly/>
                             </div>
                             <div className="mb-3">
                                 <label>Nota de Eficiência Energético-Ambiental<br/>(kg CO₂eq/MJ):</label>
                                 <div className="row align-items-center mb-3">
                                     <div className="col-md-8">
                                         <input type="number" className="form-control col-md-4"
-                                               value={NotaEficienciaEnergetica}
+                                               value={formatarNumero(NotaEficienciaEnergetica, casasDecimais)}
                                                readOnly/>
                                     </div>
                                     <div className="col-md-4">
@@ -145,7 +159,7 @@ function Calculadora({dadosIntensidadeCarbono}) {
                                 <div className="row align-items-center mb-3">
                                     <div className="col-md-8">
                                         <input type="text" className="form-control col-md-4"
-                                               value={ReducaoEmissoes + '%'}
+                                               value={formatarPorcentagem(ReducaoEmissoes, casasDecimais)}
                                                readOnly/>
                                     </div>
                                     <div className="col-md-4">
@@ -184,9 +198,13 @@ function Calculadora({dadosIntensidadeCarbono}) {
                             </div>
 
                             <div className="mb-3">
-                                <label className="form-label">Fóssil substituto: Diesel A, Gasolina A e GNV (Média
-                                    ponderada)</label>
-                                <input type="number" className="form-control col-md-4" onChange={mudaFossilSubstituto}/>
+                                <label className="form-label">Fóssil substituto:</label>
+                                <select className="form-select" id="substituto" onChange={mudaFossilSubstituto}>
+                                    <option>Média ponderada: Diesel A, Gasolina A e GNV</option>
+                                    <option>Oléo Combustível</option>
+                                    <option>Coque de Petróleo</option>
+                                </select>
+                                <input type="number" className="form-control col-md-4" value={FossilSubstituto} readOnly></input>
                             </div>
                         </div>
                     </div>
