@@ -141,7 +141,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
     //carregamento de dados inicial, só executa uma vez
     useEffect(() => {
 
-        fetch(`http://localhost:5000/mudancaUsoTerra/todos`)
+        fetch(`http://bio-calc-cefj.vercel.app/mudancaUsoTerra/todos`)
             .then(res => res.json())
             .then(data => {
                 const temp = data.map(item => item["Estado "]);
