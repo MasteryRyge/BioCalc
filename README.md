@@ -125,4 +125,4 @@ Após iniciar o backend e o frontend:
 
 - O servidor estará rodando localmente na porta 5000
 - O frontend abrirá automaticamente no navegador, no URL http://localhost:3000
-- Você poderá usar a ferramente preenchendo os campos
+- Você poderá usar a ferramenta preenchendo os campos
