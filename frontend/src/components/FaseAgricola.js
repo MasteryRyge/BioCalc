@@ -37,7 +37,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
 
             var nomeInsumo = e.target.value + " (produção)"
 
-            fetch(`http://localhost:5000/count/${encodeURIComponent(nomeInsumo)}`)
+            fetch(`/api/count/${encodeURIComponent(nomeInsumo)}`)
                 .then(res => res.json())
                 .then(data => {
                     setEmissaoBiomassaAlocada(data.dados[0]["Emissao biomassa alocada"]);
@@ -46,7 +46,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
                 .catch(err => console.error('Erro ao buscar dados:', err));
 
 
-            fetch(`http://localhost:5000/poderCalorico/${encodeURIComponent(e.target.value)}`)
+            fetch(`/api/poderCalorico/${encodeURIComponent(e.target.value)}`)
                 .then(res => res.json())
                 .then(data => {
                     setPoderCalorico(data.dados[0]['g/MJ']/1000)
@@ -57,7 +57,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
 
 
 
-            fetch(`http://localhost:5000/alocacaoMudancaUsoTerra/${encodeURIComponent(e.target.value)}`)
+            fetch(`/api/alocacaoMudancaUsoTerra/${encodeURIComponent(e.target.value)}`)
                 .then(res => res.json())
                 .then(data => {
                     const temp = data.dados.map(item => item["Estagios do ciclo de vida"]);
@@ -95,7 +95,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
 
         var nomeInsumo2 = "Amido de milho (produção)"
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent(nomeInsumo2)}`)
+        fetch(`/api/count/${encodeURIComponent(nomeInsumo2)}`)
             .then(res => res.json())
             .then(data => setImpactoMilho(data.dados[0]["Emissao biomassa alocada"] * e.target.value))
             .catch(err => console.error('Erro ao buscar dados:', err));
@@ -141,7 +141,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
     //carregamento de dados inicial, só executa uma vez
     useEffect(() => {
 
-        fetch(`http://localhost:5000/mudancaUsoTerra/todos`)
+        fetch(`/api/mudancaUsoTerra/todos`)
             .then(res => res.json())
             .then(data => {
                 const temp = data.map(item => item["Estado "]);
@@ -150,7 +150,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
             .catch(err => console.error('Erro ao buscar dados:', err));
 
 
-        fetch(`http://localhost:5000/count/veiculos`)
+        fetch(`/api/count/veiculos`)
             .then(res => res.json())
             .then(data => {
                 const temp = data.map(item => item["Insumo"]);
@@ -168,7 +168,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
 
         if(EstadoEscolhido !== "" && CultivoAgricola !== ""){
 
-            fetch(`http://localhost:5000/mudancaUsoTerra/${encodeURIComponent(EstadoEscolhido)}`)
+            fetch(`/api/mudancaUsoTerra/${encodeURIComponent(EstadoEscolhido)}`)
                 .then(res => res.json())
                 .then(data => {
                     let temp = "Emissao Final " + CultivoAgricola
@@ -187,7 +187,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
 
         if(ResiduoMadeiraEscolhido !== ""){
 
-            fetch(`http://localhost:5000/alocacaoMudancaUsoTerra/${encodeURIComponent(Insumo)}/${encodeURIComponent(ResiduoMadeiraEscolhido)}`)
+            fetch(`/api/alocacaoMudancaUsoTerra/${encodeURIComponent(Insumo)}/${encodeURIComponent(ResiduoMadeiraEscolhido)}`)
                 .then(res => res.json())
                 .then(data => { setPercentualAlocacaoBiomassaAlocada(data.dados[0]["Alocacao considerada para biomassa"])})
                 .catch(err => console.error('Erro ao buscar dados:', err));
@@ -259,7 +259,7 @@ function FaseAgricola({funcaoInsumo, funcaoResultadoAgricola, funcaoDadosCFF, ca
         setTipoVeiculoEscolhido(e.target.value)
 
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent(e.target.value)}`)
+        fetch(`/api/count/${encodeURIComponent(e.target.value)}`)
             .then(res => res.json())
             .then(data => { setEmissaoProcessoVeiculo(data.dados[0]["Emissao processo"])})
             .catch(err => console.error('Erro ao buscar dados:', err));

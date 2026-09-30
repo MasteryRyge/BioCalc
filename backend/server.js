@@ -44,7 +44,7 @@ app.get("/cbio", async (req, res) => {
     }
 });
 
-mongoose.connect("mongodb+srv://ryanmeloandrade:sustentabilidadebiocalc@sustentabilidadebio.z09luqa.mongodb.net/Sustentabilidade")
+mongoose.connect("mongodb://127.0.0.1:27017/Sustentabilidade")
     .then(() => console.log("Conectado ao MongoDB"))
     .catch((err) => console.error("Erro ao conectar:", err));
 

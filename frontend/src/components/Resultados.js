@@ -83,21 +83,21 @@ function Resultados({temp, casasDecimais, dadosCadastro}) {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/combustivelFossilSubstituto/${encodeURIComponent("Média ponderada: Diesel A, Gasolina A e GNV")}`)
+        fetch(`/api/combustivelFossilSubstituto/${encodeURIComponent("Média ponderada: Diesel A, Gasolina A e GNV")}`)
             .then(res => res.json())
             .then(data => {
                 setMediaPonderada(data.dados[0]["Intensidade total de carbono do combustivel fossil substituto (Kg)"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/combustivelFossilSubstituto/${encodeURIComponent("Oléo Combustível")}`)
+        fetch(`/api/combustivelFossilSubstituto/${encodeURIComponent("Oléo Combustível")}`)
             .then(res => res.json())
             .then(data => {
                 setOleoCombustivelPesado(data.dados[0]["Intensidade total de carbono do combustivel fossil substituto (Kg)"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/combustivelFossilSubstituto/${encodeURIComponent("Coque de Petróleo")}`)
+        fetch(`/api/combustivelFossilSubstituto/${encodeURIComponent("Coque de Petróleo")}`)
             .then(res => res.json())
             .then(data => {
                 setCoquePetroleo(data.dados[0]["Intensidade total de carbono do combustivel fossil substituto (Kg)"]);

@@ -36,7 +36,7 @@ function App() {
         setMJKgInsumo(dado["MJ/kg"])
         setMJKgInsumoBio(dado["MJ/kg Biocombustivel"])
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent(dado["Fontes de Biomassa"] + " (combustão)")}`)
+        fetch(`/api/count/${encodeURIComponent(dado["Fontes de Biomassa"] + " (combustão)")}`)
             .then(res => res.json())
             .then(data => {
                 setEmissaoBiomassaAlocadaInsumo(data.dados[0]["Emissao biomassa alocada"]);
