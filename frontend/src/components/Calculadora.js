@@ -31,7 +31,7 @@ function Calculadora({dadosIntensidadeCarbono, casasDecimais}) {
 
     function mudaFossilSubstituto(e) {
 
-        fetch(`http://localhost:5000/combustivelFossilSubstituto/${encodeURIComponent(e.target.value)}`)
+        fetch(`/api/combustivelFossilSubstituto/${encodeURIComponent(e.target.value)}`)
             .then(res => res.json())
             .then(data => {
                 setFossilSubstituto(data.dados[0]["Intensidade total de carbono do combustivel fossil substituto (Kg)"]);
@@ -87,7 +87,7 @@ function Calculadora({dadosIntensidadeCarbono, casasDecimais}) {
 
         async function buscarCBIO() {
             try {
-                const response = await fetch("http://localhost:5000/cbio");
+                const response = await fetch("/api/cbio");
                 const data = await response.json();
 
                 setValorMercadoCBIOB3(data[0].med)

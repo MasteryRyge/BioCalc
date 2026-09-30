@@ -24,7 +24,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao, c
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/count/caminhoes`)
+        fetch(`/api/count/caminhoes`)
             .then(res => res.json())
             .then(data => {
                 const temp = data.map(item => item["Insumo"]);
@@ -32,21 +32,21 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao, c
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/ferroviario`)
+        fetch(`/api/count/ferroviario`)
             .then(res => res.json())
             .then(data => {
                 setEmissaoProcessoFerroviario(data[0]["Emissao biomassa alocada"])
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/balsa`)
+        fetch(`/api/count/balsa`)
             .then(res => res.json())
             .then(data => {
                 setEmissaoProcessoBalsa(data[0]["Emissao biomassa alocada"])
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/navio`)
+        fetch(`/api/count/navio`)
             .then(res => res.json())
             .then(data => {
                 setEmissaoProcessoNavio(data[0]["Emissao biomassa alocada"])
@@ -141,7 +141,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao, c
 
         if(e.target.value !== ""){
 
-            fetch(`http://localhost:5000/count/${encodeURIComponent(e.target.value)}`)
+            fetch(`/api/count/${encodeURIComponent(e.target.value)}`)
                 .then(res => res.json())
                 .then(data => {
                     setEmissaoProcessoRodoviario(data.dados[0]["Emissao biomassa alocada"])
@@ -213,7 +213,7 @@ function FaseDistribuicao({poderCalorificoInsumo, funcaoResultadoDistribuicao, c
 
         if(e.target.value !== ""){
 
-            fetch(`http://localhost:5000/count/${encodeURIComponent(e.target.value)}`)
+            fetch(`/api/count/${encodeURIComponent(e.target.value)}`)
                 .then(res => res.json())
                 .then(data => {
                     setEmissaoProcessoRodoviarioPorto(data.dados[0]["Emissao biomassa alocada"])

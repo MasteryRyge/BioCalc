@@ -56,7 +56,7 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
 
     useEffect( () => {
 
-        fetch(`http://localhost:5000/count/eletricidades`)
+        fetch(`/api/count/eletricidades`)
             .then(res => res.json())
             .then(data => {
 
@@ -72,56 +72,56 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
 
         //dados para o cálculo do impacto da produção de combustível
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Diesel (produção)")}`)
+        fetch(`/api/count/${encodeURIComponent("Diesel (produção)")}`)
             .then(res => res.json())
             .then(data => {
                 setDieselValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Gás Natural (produção)")}`)
+        fetch(`/api/count/${encodeURIComponent("Gás Natural (produção)")}`)
             .then(res => res.json())
             .then(data => {
                 setGasNaturalValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("GLP (produção)")}`)
+        fetch(`/api/count/${encodeURIComponent("GLP (produção)")}`)
             .then(res => res.json())
             .then(data => {
                 setGLPValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Gasolina A (produção)")}`)
+        fetch(`/api/count/${encodeURIComponent("Gasolina A (produção)")}`)
             .then(res => res.json())
             .then(data => {
                 setGasolinaAValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Etanol anidro (produção)")}`)
+        fetch(`/api/count/${encodeURIComponent("Etanol anidro (produção)")}`)
             .then(res => res.json())
             .then(data => {
                 setEtanolAnidroValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Etanol hidratado (produção)")}`)
+        fetch(`/api/count/${encodeURIComponent("Etanol hidratado (produção)")}`)
             .then(res => res.json())
             .then(data => {
                 setEtanolHidratadoValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Cavaco de madeira (produção)")}`)
+        fetch(`/api/count/${encodeURIComponent("Cavaco de madeira (produção)")}`)
             .then(res => res.json())
             .then(data => {
                 setCavacoMadeiraValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Lenha (produção)")}`)
+        fetch(`/api/count/${encodeURIComponent("Lenha (produção)")}`)
             .then(res => res.json())
             .then(data => {
                 setLenhaValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
@@ -131,56 +131,56 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
 
         //dados para o impacto da combustão estacionária
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Combustão de Diesel (combustão)")}`)
+        fetch(`/api/count/${encodeURIComponent("Combustão de Diesel (combustão)")}`)
             .then(res => res.json())
             .then(data => {
                 setCombustaoDieselValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Uso de Gás Natural (combustão)")}`)
+        fetch(`/api/count/${encodeURIComponent("Uso de Gás Natural (combustão)")}`)
             .then(res => res.json())
             .then(data => {
                 setUsoGasNaturalValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Uso de GLP (combustão)")}`)
+        fetch(`/api/count/${encodeURIComponent("Uso de GLP (combustão)")}`)
             .then(res => res.json())
             .then(data => {
                 setUsoGLPValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Combustão de Gasolina A (combustão)")}`)
+        fetch(`/api/count/${encodeURIComponent("Combustão de Gasolina A (combustão)")}`)
             .then(res => res.json())
             .then(data => {
                 setCombustaoGasolinaAValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Combustão de Etanol anidro (combustão)")}`)
+        fetch(`/api/count/${encodeURIComponent("Combustão de Etanol anidro (combustão)")}`)
             .then(res => res.json())
             .then(data => {
                 setCombustaoEtanolAnidroValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Combustão de Etanol hidratado (combustão)")}`)
+        fetch(`/api/count/${encodeURIComponent("Combustão de Etanol hidratado (combustão)")}`)
             .then(res => res.json())
             .then(data => {
                 setCombustaoEtanolHidratadoValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Combustão de Cavaco de madeira (combustão)")}`)
+        fetch(`/api/count/${encodeURIComponent("Combustão de Cavaco de madeira (combustão)")}`)
             .then(res => res.json())
             .then(data => {
                 setCombustaoCavacoMadeiraValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Combustão de Lenha (combustão)")}`)
+        fetch(`/api/count/${encodeURIComponent("Combustão de Lenha (combustão)")}`)
             .then(res => res.json())
             .then(data => {
                 setCombustaoLenhaValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
@@ -190,21 +190,21 @@ function FaseIndustrial({poderCalorificoInsumo, emissaoBiomassaAlocadaInsumo, fu
 
         //dados insumos industriais
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Água")}`)
+        fetch(`/api/count/${encodeURIComponent("Água")}`)
             .then(res => res.json())
             .then(data => {
                 setAguaValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Óleo lubrificante")}`)
+        fetch(`/api/count/${encodeURIComponent("Óleo lubrificante")}`)
             .then(res => res.json())
             .then(data => {
                 setOleoLubrificanteValorEmissao(data.dados[0]["Emissao biomassa alocada"]);
             })
             .catch(err => console.error('Erro ao buscar dados:', err));
 
-        fetch(`http://localhost:5000/count/${encodeURIComponent("Areia de sílica")}`)
+        fetch(`/api/count/${encodeURIComponent("Areia de sílica")}`)
             .then(res => res.json())
             .then(data => {
                 setAreiaSilicaValorEmissao(data.dados[0]["Emissao biomassa alocada"]);

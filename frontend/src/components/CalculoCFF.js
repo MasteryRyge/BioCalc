@@ -17,7 +17,7 @@ function CalculoCFF({dadosIntensidadeCarbono, ImpactoTransporteBiomassa, Impacto
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/CFF/todos')
+        fetch('/api/CFF/todos')
             .then(res => res.json())
             .then(data => {
                 setValores(data.dados)
